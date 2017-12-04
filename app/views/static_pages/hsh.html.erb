@@ -1,0 +1,53 @@
+
+
+
+<% provide(:title, 'My hash') %>
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Hash page</h1>
+
+<%= form_tag({controller: 'static_pages', action: 'new_hsh'}, method: 'post')  do %>
+    <%= submit_tag 'Generate new hash' , class: "btn btn-sm btn-primary" %>
+<% end %>
+
+<pre>
+  <h3>My initially generated hash: </h3>
+  <%= session[:session_myhsh] %>
+  <br>
+  <%= @myhsh.out %>
+
+  <% if !@arr.nil? %>
+      <h3> Array of elements used in initial Hash: </h3>
+      <%= @arr.to_s %>
+  <% end %>
+
+  <% if !@max.nil? %>
+      <h3> Array of elements used in initial Hash with maximum value: </h3>
+      <%= @max.to_s %>
+  <% end %>
+
+  <% if !@nonill.nil? %>
+      <h3> Array of elements used in initial Hash without nil values: </h3>
+      <%= @nonill.to_s %>
+  <% end %>
+
+</pre>
+
+
+
+<%= form_tag({controller: 'static_pages', action: 'array'}, method: 'post')  do %>
+    <%= submit_tag 'Get array' , class: "btn btn-sm btn-primary" %>
+<% end %>
+
+<%= form_tag({controller: 'static_pages', action: 'get_max'}, method: 'post')  do %>
+    <%= submit_tag 'Get max' , class: "btn btn-sm btn-primary" %>
+<% end %>
+
+<%= form_tag({controller: 'static_pages', action: 'no_nill'}, method: 'post')  do %>
+    <%= submit_tag 'Get nonill array' , class: "btn btn-sm btn-primary" %>
+<% end %>
+
+
+</body>
+</html>
