@@ -48,7 +48,6 @@ test:
 #
 
 production:
-  <<: *default
-  database: test_igor
-
-#  url: <%=ENV['CLEARDB_DATABASE_URL']%>
+  adapter: mysql2
+  encoding: utf8
+  url: <%=ENV['CLEARDB_DATABASE_URL']%>
