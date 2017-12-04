@@ -49,7 +49,6 @@ test:
 
 production:
   <<: *default
-#  database: test_igor
-#  username: root
-#  password: 1
-  url: <%=ENV['CLEARDB_DATABASE_URL']%>
+  database: test_igor
+
+#  url: <%=ENV['CLEARDB_DATABASE_URL']%>
