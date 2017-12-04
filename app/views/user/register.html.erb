@@ -1,0 +1,33 @@
+<% provide(:title, 'Register') %>
+
+<h1>Log in: </h1>
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_tag do %>
+        <%= render 'shared/error_messages' %>
+    <% end %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_tag({controller: 'user', action: 'create'}, method: 'post')  do %>
+
+        <%= label_tag 'Name' %>
+        <%= text_field_tag(:name) %>
+
+        <%= label_tag 'Email' %>
+        <%= text_field_tag(:email) %>
+
+        <%= label_tag 'Password' %>
+        <%= password_field_tag (:password) %>
+
+        <%= label_tag 'Confirm password' %>
+        <%= password_field_tag (:password_confirmation) %>
+
+        <%= label_tag '' %>
+
+        <%= submit_tag 'Register' , class: "btn btn-sm btn-primary" %>
+    <% end %>
+  </div>
+</div>

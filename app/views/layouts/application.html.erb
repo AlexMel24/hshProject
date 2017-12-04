@@ -1,0 +1,40 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Web hash project | <%= yield(:title) %> </title>
+  <%= stylesheet_link_tag "application", media: "all",
+                          "data-turbolinks-track" => true %>
+</head>
+<body>
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container" >
+
+      <nav>
+        <ul class="nav pull-right">
+          <li><%= link_to "Home",    root_path %></li>
+
+          <% if !session[:user_id] %>
+              <li> <%= link_to "Sign in", login_path %> </li>
+          <% else %>
+              <li> <%= link_to "Hash page",    hsh_path %> </li>
+              <li> <%= link_to "Sign out", logout_path  %> </li>
+
+          <%end %>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <p>
+    <%= render 'shared/flashes' %>
+  </p>
+</header>
+<div class="container">
+  <%= yield %>
+</div>
+</body>
+</html>
