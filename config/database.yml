@@ -49,7 +49,7 @@ test:
 
 production:
   <<: *default
-  database: test_igor
-  username: root
-  password: 1
+#  database: test_igor
+#  username: root
+#  password: 1
   url: <%=ENV['DATABASE_URL']%>
