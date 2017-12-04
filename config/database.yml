@@ -52,4 +52,4 @@ production:
 #  database: test_igor
 #  username: root
 #  password: 1
-  url: <%=ENV['DATABASE_URL']%>
+  url: <%=ENV['CLEARDB_DATABASE_URL']%>

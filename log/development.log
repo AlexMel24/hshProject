@@ -27583,3 +27583,33 @@ Processing by UserController#logout as HTML
   Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
   Rendered shared/_flashes.html.erb (0.1ms)
 Completed 200 OK in 7ms (Views: 6.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-04 15:31:05 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+Completed 200 OK in 188ms (Views: 181.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-04 15:31:08 +0300
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-04 15:31:08 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (1.7ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-04 15:31:10 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (2.3ms)
+  Rendered user/register.html.erb within layouts/application (5.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 13.9ms | ActiveRecord: 5.3ms)
