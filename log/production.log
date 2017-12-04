@@ -1,0 +1,273 @@
+I, [2017-12-04T15:43:42.936191 #16289]  INFO -- : Started GET "/" for 127.0.0.1 at 2017-12-04 15:43:42 +0300
+I, [2017-12-04T15:43:42.943996 #16289]  INFO -- : Processing by StaticPagesController#welcome as HTML
+I, [2017-12-04T15:43:42.954668 #16289]  INFO -- :   Rendered static_pages/welcome.html.erb within layouts/application (0.4ms)
+I, [2017-12-04T15:43:42.956465 #16289]  INFO -- :   Rendered shared/_flashes.html.erb (0.3ms)
+I, [2017-12-04T15:43:42.956712 #16289]  INFO -- : Completed 200 OK in 13ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+I, [2017-12-04T15:43:43.067453 #16289]  INFO -- : Started GET "/stylesheets/application.css" for 127.0.0.1 at 2017-12-04 15:43:43 +0300
+F, [2017-12-04T15:43:43.069612 #16289] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+I, [2017-12-04T15:43:47.108501 #16289]  INFO -- : Started GET "/" for 127.0.0.1 at 2017-12-04 15:43:47 +0300
+I, [2017-12-04T15:43:47.109885 #16289]  INFO -- : Processing by StaticPagesController#welcome as HTML
+I, [2017-12-04T15:43:47.110470 #16289]  INFO -- :   Rendered static_pages/welcome.html.erb within layouts/application (0.0ms)
+I, [2017-12-04T15:43:47.111260 #16289]  INFO -- :   Rendered shared/_flashes.html.erb (0.1ms)
+I, [2017-12-04T15:43:47.111756 #16289]  INFO -- : Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+I, [2017-12-04T15:43:47.129384 #16289]  INFO -- : Started GET "/stylesheets/application.css" for 127.0.0.1 at 2017-12-04 15:43:47 +0300
+F, [2017-12-04T15:43:47.130858 #16289] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+I, [2017-12-04T15:43:48.189114 #16289]  INFO -- : Started GET "/login" for 127.0.0.1 at 2017-12-04 15:43:48 +0300
+I, [2017-12-04T15:43:48.496577 #16289]  INFO -- : Processing by UserController#login as HTML
+I, [2017-12-04T15:43:48.502537 #16289]  INFO -- :   Rendered user/login.html.erb within layouts/application (1.4ms)
+I, [2017-12-04T15:43:48.503060 #16289]  INFO -- :   Rendered shared/_flashes.html.erb (0.0ms)
+I, [2017-12-04T15:43:48.503264 #16289]  INFO -- : Completed 200 OK in 6ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+I, [2017-12-04T15:43:48.529284 #16289]  INFO -- : Started GET "/stylesheets/application.css" for 127.0.0.1 at 2017-12-04 15:43:48 +0300
+F, [2017-12-04T15:43:48.531174 #16289] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+I, [2017-12-04T15:43:54.345893 #16289]  INFO -- : Started GET "/register" for 127.0.0.1 at 2017-12-04 15:43:54 +0300
+I, [2017-12-04T15:43:54.347541 #16289]  INFO -- : Processing by UserController#register as HTML
+I, [2017-12-04T15:43:54.349922 #16289]  INFO -- : Completed 500 Internal Server Error in 2ms (ActiveRecord: 1.1ms)
+F, [2017-12-04T15:43:54.350709 #16289] FATAL -- : 
+ActiveRecord::StatementInvalid (Mysql2::Error: No database selected: SHOW FULL FIELDS FROM `users`):
+  app/controllers/user_controller.rb:4:in `register'
+
+
+I, [2017-12-04T15:44:05.314870 #16289]  INFO -- : Started GET "/register" for 127.0.0.1 at 2017-12-04 15:44:05 +0300
+I, [2017-12-04T15:44:05.316195 #16289]  INFO -- : Processing by UserController#register as HTML
+I, [2017-12-04T15:44:05.317622 #16289]  INFO -- : Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.9ms)
+F, [2017-12-04T15:44:05.318272 #16289] FATAL -- : 
+ActiveRecord::StatementInvalid (Mysql2::Error: No database selected: SHOW FULL FIELDS FROM `users`):
+  app/controllers/user_controller.rb:4:in `register'
+
+
+I, [2017-12-04T15:44:07.379382 #16289]  INFO -- : Started GET "/" for 127.0.0.1 at 2017-12-04 15:44:07 +0300
+I, [2017-12-04T15:44:07.381253 #16289]  INFO -- : Processing by StaticPagesController#welcome as HTML
+I, [2017-12-04T15:44:07.382448 #16289]  INFO -- :   Rendered static_pages/welcome.html.erb within layouts/application (0.0ms)
+I, [2017-12-04T15:44:07.383266 #16289]  INFO -- :   Rendered shared/_flashes.html.erb (0.0ms)
+I, [2017-12-04T15:44:07.383456 #16289]  INFO -- : Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+I, [2017-12-04T15:44:07.417309 #16289]  INFO -- : Started GET "/stylesheets/application.css" for 127.0.0.1 at 2017-12-04 15:44:07 +0300
+F, [2017-12-04T15:44:07.419144 #16289] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+I, [2017-12-04T15:44:08.689780 #16289]  INFO -- : Started GET "/login" for 127.0.0.1 at 2017-12-04 15:44:08 +0300
+I, [2017-12-04T15:44:08.691149 #16289]  INFO -- : Processing by UserController#login as HTML
+I, [2017-12-04T15:44:08.692244 #16289]  INFO -- :   Rendered user/login.html.erb within layouts/application (0.5ms)
+I, [2017-12-04T15:44:08.692746 #16289]  INFO -- :   Rendered shared/_flashes.html.erb (0.0ms)
+I, [2017-12-04T15:44:08.692900 #16289]  INFO -- : Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+I, [2017-12-04T15:44:08.720550 #16289]  INFO -- : Started GET "/stylesheets/application.css" for 127.0.0.1 at 2017-12-04 15:44:08 +0300
+F, [2017-12-04T15:44:08.722113 #16289] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+I, [2017-12-04T15:45:59.280261 #16289]  INFO -- : Started GET "/" for 127.0.0.1 at 2017-12-04 15:45:59 +0300
+I, [2017-12-04T15:45:59.282228 #16289]  INFO -- : Processing by StaticPagesController#welcome as HTML
+I, [2017-12-04T15:45:59.283081 #16289]  INFO -- :   Rendered static_pages/welcome.html.erb within layouts/application (0.0ms)
+I, [2017-12-04T15:45:59.284226 #16289]  INFO -- :   Rendered shared/_flashes.html.erb (0.1ms)
+I, [2017-12-04T15:45:59.284757 #16289]  INFO -- : Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+I, [2017-12-04T15:45:59.399664 #16289]  INFO -- : Started GET "/stylesheets/application.css" for 127.0.0.1 at 2017-12-04 15:45:59 +0300
+F, [2017-12-04T15:45:59.401030 #16289] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+I, [2017-12-04T15:46:01.100645 #16289]  INFO -- : Started GET "/" for 127.0.0.1 at 2017-12-04 15:46:01 +0300
+I, [2017-12-04T15:46:01.102180 #16289]  INFO -- : Processing by StaticPagesController#welcome as HTML
+I, [2017-12-04T15:46:01.102734 #16289]  INFO -- :   Rendered static_pages/welcome.html.erb within layouts/application (0.0ms)
+I, [2017-12-04T15:46:01.103233 #16289]  INFO -- :   Rendered shared/_flashes.html.erb (0.0ms)
+I, [2017-12-04T15:46:01.103376 #16289]  INFO -- : Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+I, [2017-12-04T15:46:01.120915 #16289]  INFO -- : Started GET "/stylesheets/application.css" for 127.0.0.1 at 2017-12-04 15:46:01 +0300
+F, [2017-12-04T15:46:01.124797 #16289] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+I, [2017-12-04T15:46:02.974019 #16289]  INFO -- : Started GET "/login" for 127.0.0.1 at 2017-12-04 15:46:02 +0300
+I, [2017-12-04T15:46:02.975479 #16289]  INFO -- : Processing by UserController#login as HTML
+I, [2017-12-04T15:46:02.976874 #16289]  INFO -- :   Rendered user/login.html.erb within layouts/application (0.7ms)
+I, [2017-12-04T15:46:02.977469 #16289]  INFO -- :   Rendered shared/_flashes.html.erb (0.0ms)
+I, [2017-12-04T15:46:02.977634 #16289]  INFO -- : Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+I, [2017-12-04T15:46:02.996919 #16289]  INFO -- : Started GET "/stylesheets/application.css" for 127.0.0.1 at 2017-12-04 15:46:02 +0300
+F, [2017-12-04T15:46:02.998952 #16289] FATAL -- : 
+ActionController::RoutingError (No route matches [GET] "/stylesheets/application.css"):
+  actionpack (4.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.8) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.8) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.8) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.8) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.8) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.8) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.8) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.8) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.8) lib/rails/engine.rb:518:in `call'
+  railties (4.2.8) lib/rails/application.rb:165:in `call'
+  rack (1.6.8) lib/rack/lock.rb:17:in `call'
+  rack (1.6.8) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.8) lib/rack/handler/webrick.rb:88:in `service'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:140:in `service'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/httpserver.rb:96:in `run'
+  /home/mel/.rvm/rubies/ruby-2.4.1/lib/ruby/2.4.0/webrick/server.rb:290:in `block in start_thread'
+
+
+I, [2017-12-04T15:46:06.537918 #16289]  INFO -- : Started POST "/login" for 127.0.0.1 at 2017-12-04 15:46:06 +0300
+I, [2017-12-04T15:46:06.539637 #16289]  INFO -- : Processing by UserController#signin as HTML
+I, [2017-12-04T15:46:06.539731 #16289]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"WSu0yjnWJYGsKuPEbUa7RPW6e5KLXCAu9HjWzqJUUxxl90owusDOsYFryedFI89ZPMUkTK1WmOO1izq+80PIUQ==", "email"=>"", "password"=>"[FILTERED]", "commit"=>"Log in"}
+I, [2017-12-04T15:46:06.541401 #16289]  INFO -- : Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.8ms)
+F, [2017-12-04T15:46:06.542174 #16289] FATAL -- : 
+ActiveRecord::StatementInvalid (Mysql2::Error: No database selected: SHOW FULL FIELDS FROM `users`):
+  app/controllers/user_controller.rb:20:in `signin'
+
+
