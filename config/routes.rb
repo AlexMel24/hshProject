@@ -21,4 +21,6 @@ Rails.application.routes.draw do
   get   '/hsh/sort'    => 'static_pages#hsh'
   post  '/hsh/sort'    => 'static_pages#sort_ar'
 
+  get   '/jshsh'       => 'java_script_hash#jsshoh'
+
 end
