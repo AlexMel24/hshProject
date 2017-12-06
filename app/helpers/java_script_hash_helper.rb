@@ -1,0 +1,2 @@
+module JavaScriptHashHelper
+end
