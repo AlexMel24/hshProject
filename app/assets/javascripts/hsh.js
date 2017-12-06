@@ -9,7 +9,7 @@ function Hsh () {
     maxPairs = 100;
     maxElements = 3;
     currentPairs = 0;
-
+    this.out = '';
 
     this.NewHashElement = function (count) {
         var i = 0;
@@ -40,8 +40,8 @@ function Hsh () {
         if (this.CheckForMaxpairs()) {
             var tempHsh = thsh;
             for (var key in tempHsh) {
-                alert (tempHsh[key]);
-                if (tempHsh[key] !== 'object') {
+//                alert (tempHsh[key]);
+                if (typeof (tempHsh[key]) !== 'object') {
                     switch (tempHsh[key]) {
                         case 0:
                             tempHsh[key] = 'nil';
@@ -72,4 +72,37 @@ function Hsh () {
         }
 
     }
+
+    this.Out = function (varhsh,newLine) {
+        var tempHsh = varhsh;
+        var key
+        for (key in tempHsh) {
+            this.out = this.out + "\r\n" + newLine + key + '=>';
+            if (typeof (tempHsh[key]) !== 'object') {
+                this.out = this.out + tempHsh[key];
+            }
+            else
+            {
+                this.Out(tempHsh[key],newLine +'          ');
+            }
+        }
+
+
+    }
+
+}
+DisplayHash = function() {
+    var hs = new Hsh();
+    var t = hs.NewHashElement(3);
+    var h = hs.CreateHash(t);
+    hs.Out(h,'');
+
+    var pre = document.getElementsByTagName('pre');
+
+    pre[0].innerHTML = hs.out;
+}
+window.onload = function() {
+
+    but = document.getElementById('button1');
+    but.addEventListener('click',DisplayHash,true);
 }
