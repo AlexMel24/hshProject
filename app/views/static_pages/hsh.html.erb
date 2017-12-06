@@ -11,28 +11,38 @@
     <%= submit_tag 'Generate new hash' , class: "btn btn-sm btn-primary" %>
 <% end %>
 
-<pre>
+
   <h3>My initially generated hash: </h3>
+  <pre>
   <%= session[:session_myhsh] %>
+  </pre>
   <br>
-  <%= @myhsh.out %>
+
+  <pre>
+    <%= @myhsh.out %>
+  </pre>
 
   <% if !@arr.nil? %>
       <h3> Array of elements used in initial Hash: </h3>
+      <pre>
       <%= @arr.to_s %>
+      </pre>
   <% end %>
 
   <% if !@max.nil? %>
       <h3> Array of elements used in initial Hash with maximum value: </h3>
+      <pre>
       <%= @max.to_s %>
+      </pre>
   <% end %>
 
   <% if !@nonill.nil? %>
       <h3> Array of elements used in initial Hash without nil values: </h3>
+      <pre>
       <%= @nonill.to_s %>
+      </pre>
   <% end %>
 
-</pre>
 
 
 

@@ -11,13 +11,13 @@ function Hsh () {
     currentPairs = 0;
     this.out = '';
 
-    this.NewHashElement = function (count) {
+    this.newHashElement = function (count) {
         var i = 0;
-        if (this.CheckForMaxpairs()) {
+        if (this.checkForMaxpairs()) {
             var tempHsh = {};
-            while (i < count && this.CheckForMaxpairs()) {
+            while (i < count && this.checkForMaxpairs()) {
                 var r = getRandomInt(0, 3);
-                var name = 'var' + i + r;
+                var name = randName(8) + i + r;
                 tempHsh[name] = r;
 
                 currentPairs += 1;
@@ -28,7 +28,7 @@ function Hsh () {
     }
 
 
-    this.CheckForMaxpairs = function () {
+    this.checkForMaxpairs = function () {
         if (currentPairs < maxPairs)
             return true;
         else
@@ -36,8 +36,8 @@ function Hsh () {
     }
 
 
-    this.CreateHash = function (thsh) {
-        if (this.CheckForMaxpairs()) {
+    this.createHash = function (thsh) {
+        if (this.checkForMaxpairs()) {
             var tempHsh = thsh;
             for (var key in tempHsh) {
 //                alert (tempHsh[key]);
@@ -50,10 +50,10 @@ function Hsh () {
                             tempHsh[key] = 3 + getRandomInt(0, maxElements);
                             break;
                         case 2:
-                            if (this.CheckForMaxpairs()) {
+                            if (this.checkForMaxpairs()) {
                                 tempHsh[key] = {};
-                                tempHsh[key] = this.NewHashElement(1 + getRandomInt(0, maxElements));
-                                this.CreateHash(tempHsh[key]);
+                                tempHsh[key] = this.newHashElement(1 + getRandomInt(0, maxElements));
+                                this.createHash(tempHsh[key]);
                                 break;
                             }
                             else
@@ -73,7 +73,7 @@ function Hsh () {
 
     }
 
-    this.Out = function (varhsh,newLine) {
+    this.showHash = function (varhsh, newLine) {
         var tempHsh = varhsh;
         var key
         for (key in tempHsh) {
@@ -83,19 +83,25 @@ function Hsh () {
             }
             else
             {
-                this.Out(tempHsh[key],newLine +'          ');
+                this.showHash(tempHsh[key],newLine +"            ");
             }
         }
 
 
     }
 
+    var randName = function(n) {
+        var s = '', abd = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_', aL = abd.length;
+        while (s.length < n)
+            s += abd[Math.random() * aL | 0];
+        return s;
+    }
 }
-DisplayHash = function() {
+displayHash = function() {
     var hs = new Hsh();
-    var t = hs.NewHashElement(3);
-    var h = hs.CreateHash(t);
-    hs.Out(h,'');
+    var t = hs.newHashElement(3);
+    var h = hs.createHash(t);
+    hs.showHash(h,'');
 
     var pre = document.getElementsByTagName('pre');
 
@@ -104,5 +110,5 @@ DisplayHash = function() {
 window.onload = function() {
 
     but = document.getElementById('button1');
-    but.addEventListener('click',DisplayHash,true);
+    but.addEventListener('click',displayHash,true);
 }

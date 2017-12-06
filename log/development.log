@@ -30845,3 +30845,519 @@ Processing by JavaScriptHashController#jsshoh as HTML
   Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
   Rendered shared/_flashes.html.erb (0.1ms)
 Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-06 16:15:36 +0300
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-c58644157abfc17ada19e12cb4c02e16eccb747374b6c6aa3b5511399cac791c.js?body=1" for 127.0.0.1 at 2017-12-06 16:15:36 +0300
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-06 16:15:37 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (0.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-06 16:15:39 +0300
+Processing by UserController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oCEAFpK4cVc74f5zGN75704urQuJB3JNrpgGkrIUvYV75U4mD01Cg0ORIqN73n7IQ90Rlb+Qx2rx/ia1XPHscw==", "email"=>"frunz24@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (1.9ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'frunz24@gmail.com' LIMIT 1
+  Rendered static_pages/welcome.html.erb within layouts/application (0.2ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 91ms (Views: 18.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 16:15:41 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 16:15:57 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-06 16:15:57 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-06 16:15:57 +0300
+
+
+Started GET "/assets/hsh.self-a3b3272137dc90b27e129533429c51ca655b67d9e35635ac6832dfef68d917d0.js?body=1" for 127.0.0.1 at 2017-12-06 16:15:57 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-06 16:15:57 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 16:17:25 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-f56f214fab3ce655609ef40ca2aa2d2e475ad1b50df106d7431be367ae0fcb22.js?body=1" for 127.0.0.1 at 2017-12-06 16:17:25 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-06 16:17:25 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-06 16:17:25 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-06 16:17:25 +0300
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 16:17:40 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (2.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-06 16:17:46 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I8K2cZXl/A7yJLt6fYj9NpfFgZ+TQYh3Y3g3d2+XDwz4BvhBCBDP2opUZ6oeiHoRmjY9AaXWPVA8HhdQgXJe+g==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-06 16:17:49 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"29VB+xIgD8dnrXxToBKPM8KHg3CjNYteG5d4zh2+TnQAEQ/Lj9U8Ex/doIPDEggUz3Q/7pWiPnlE8Vjp81sfgg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-06 16:17:51 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q2sCyYemLIACpG9m2WwSMqRiigJq43OxJUhAr9mT11Nwr0z5GlMfVHrUs7a6bJUVqZE2nFx0xpZ6LmCIN3aGpQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-06 16:17:52 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hnlM74g4Gx/YbIqmNf9Yg1fnQMpb6WpnHuADW858JYRdvQLfFc0oy6AcVnZW/9+kWhT8VG1+30BBhiN8IJl0cg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 16:17:59 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 16:19:49 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (7.5ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+Completed 200 OK in 252ms (Views: 243.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-8b89202fad05dda52b6fdf7cb02ef083b62c87a6379197cb329fd10fd1820bbf.js?body=1" for 127.0.0.1 at 2017-12-06 16:19:49 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-06 16:19:49 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-06 16:19:49 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-06 16:19:49 +0300
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 16:43:31 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.8ms)
+  Rendered shared/_flashes.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-56cd30ceec9a4ec3ac9494dbb6c4ec474cc5a6d2f750303c12d067f1d8c451f3.js?body=1" for 127.0.0.1 at 2017-12-06 16:43:31 +0300
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 16:44:04 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.7ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-56cd30ceec9a4ec3ac9494dbb6c4ec474cc5a6d2f750303c12d067f1d8c451f3.js?body=1" for 127.0.0.1 at 2017-12-06 16:44:04 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-06 16:44:04 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-06 16:44:04 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-06 16:44:04 +0300
+
+
+Started POST "/hsh" for 127.0.0.1 at 2017-12-06 16:44:15 +0300
+Processing by StaticPagesController#array as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Drgzcyse2uObJ7T2Hza4V5to/HmCI/hjdEm0CtuS9QL/q79UVlIv/YcQgO7fF3GU54fb9CfOsbStwb3xYsaIg==", "commit"=>"Get array"}
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get array', '2017-12-06 13:44:16', '2017-12-06 13:44:16')[0m
+  [1m[35m (28.3ms)[0m  COMMIT
+  Rendered static_pages/hsh.html.erb within layouts/application (1.7ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 145ms (Views: 12.9ms | ActiveRecord: 75.1ms)
+
+
+Started POST "/hsh/max" for 127.0.0.1 at 2017-12-06 16:44:19 +0300
+Processing by StaticPagesController#get_max as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MSeV7dvFR6imcbgHnaaU6UkaxvrEMuvnnXSxZdobCnPq49vdRjB0fN4BZNf+phPOROl6ZPKlXsDCEpFCNP5bhQ==", "commit"=>"Get max"}
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get max', '2017-12-06 13:44:20', '2017-12-06 13:44:20')
+  [1m[36m (32.6ms)[0m  [1mCOMMIT[0m
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 50ms (Views: 13.6ms | ActiveRecord: 34.3ms)
+
+
+Started POST "/hsh/nonill" for 127.0.0.1 at 2017-12-06 16:44:23 +0300
+Processing by StaticPagesController#no_nill as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0x8FjEILzro1GL/rQStbuoGKAqSb50jHH+NdQnyMIz0I20u83/79bk1oYzsiK9ydjHm+Oq1w/eBAhX1lkmlyyw==", "commit"=>"Get nonill array"}
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get no nil array', '2017-12-06 13:44:23', '2017-12-06 13:44:23')[0m
+  [1m[35m (38.2ms)[0m  COMMIT
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 9.4ms | ActiveRecord: 39.9ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 16:44:34 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 16:47:06 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-ca74317b579f703fb5807979616b55c73b555bc4a92a21b96597b3e637beba76.js?body=1" for 127.0.0.1 at 2017-12-06 16:47:07 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-06 16:47:07 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-06 16:47:07 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-06 16:47:07 +0300
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 16:47:15 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 16:47:17 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 16:47:19 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 17:01:28 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (4.2ms)
+  Rendered shared/_flashes.html.erb (0.2ms)
+Completed 200 OK in 36ms (Views: 34.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-784d91bd694448becad16e1a38a4848ea309e800799a85c9a8a46e5026cb80ef.js?body=1" for 127.0.0.1 at 2017-12-06 17:01:28 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-06 17:01:28 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-06 17:01:28 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-06 17:01:28 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 17:01:29 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 17:01:40 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-06 17:01:41 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QmKYk5uIetQzMaFp4yZuuDdqW9DV4j/mxuJOq5bBROGZptajBn1JAEtBfbmAJumfOpnnTuN1isGZhG6MeCQVFw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-06 17:01:43 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KupOCFhEBI6LZnVThWYme6sYPe7DG2kK2fDsCdcKJSHxLgA4xbE3WvMWqYPmZqFcpuuBcPWM3C2GlswuOe901w==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-06 17:01:45 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Nhlwqy54mDMc7e4Zq5PbJ9GQes39ej2pCIp2vWykiErt3T6bs42r52SdMsnIk1wA3GPGU8vtiI5X7FaagkHZvA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.8ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 17:01:50 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 17:03:19 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (1.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-784d91bd694448becad16e1a38a4848ea309e800799a85c9a8a46e5026cb80ef.js?body=1" for 127.0.0.1 at 2017-12-06 17:03:19 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-06 17:03:19 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-06 17:03:19 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-06 17:03:19 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 17:03:40 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-784d91bd694448becad16e1a38a4848ea309e800799a85c9a8a46e5026cb80ef.js?body=1" for 127.0.0.1 at 2017-12-06 17:03:40 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-06 17:03:40 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-06 17:03:40 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-06 17:03:40 +0300
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 17:03:42 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 17:03:43 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 17:03:44 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 17:03:46 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 17:03:47 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 17:03:49 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 17:03:50 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 17:03:51 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 17:03:52 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 17:04:18 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 17:04:19 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 17:04:20 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 17:04:21 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 17:04:22 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 17:04:23 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 17:04:24 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 17:04:25 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 17:04:27 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 17:04:28 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 17:04:29 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 17:04:30 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 17:04:32 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-06 17:04:33 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-06 17:04:35 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
