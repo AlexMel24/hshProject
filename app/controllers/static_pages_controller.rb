@@ -60,8 +60,8 @@ private
 
   def insert_activity(act_name)
     @user_activ = UserActivity.new
-    @user_activ.user_id= session[:user_id]
-    @user_activ.activity= act_name
+    @user_activ.user_id = session[:user_id]
+    @user_activ.activity = act_name
     @user_activ.save
   end
 
