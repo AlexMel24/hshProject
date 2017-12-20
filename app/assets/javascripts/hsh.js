@@ -90,29 +90,76 @@ Hsh.prototype.showHash = function (varhsh, newLine) {
         }
     }
 
-
 }
 
 
 function Arr () {
 
+    ar = [];
+    this.getArr = function (varhsh) {
+        var tempHsh = varhsh;
+        var key
+        for (key in tempHsh) {
+            if (typeof tempHsh[key] !== 'object')
+            {
+                var tHsh = {};
+                tHsh[key] = tempHsh[key];
+                //alert (key);
+                //alert (tHsh[key]);
+                ar.push(tHsh);
+            }
+            else
+            {
+                this.getArr(tempHsh[key])
+            }
+        }
+    }
 
+    this.printAr = function () {
+        var i;
+        var res = '';
+        for (i in ar)
+        {
+
+            var key;
+            for (key in ar[i])
+            {
+                res += '"' + key.toString() + '"=>';
+                res += ar[i][key].toString() + ',';
+            }
+        }
+        return res.slice(0, -1);
+    }
 }
+
 
 Arr.prototype = new Hsh();
 
 displayHash = function() {
-    var hs = new Arr();
 
-    var t = hs.newHashElement(3);
-    var h = hs.createHash(t);
+    hs = new Arr();
+    var prear = document.getElementById('array');
+    prear.innerHTML = '';
+
+    t = hs.newHashElement(3);
+    h = hs.createHash(t);
+    hs.getArr(h);
     hs.showHash(h,'');
-    var pre = document.getElementById('init');
-    pre.innerHTML = hs.out;
+    var prehs = document.getElementById('init');
+    prehs.innerHTML = hs.out;
+
+
+}
+
+printArrray = function () {
+    var prear = document.getElementById('array');
+    prear.innerHTML = hs.printAr()
 }
 
 window.onload = function() {
     displayHash();
     but = document.getElementById('button1');
     but.addEventListener('click',displayHash,true);
+    but2 = document.getElementById('button2');
+    but2.addEventListener('click',printArrray,true);
 }

@@ -33619,3 +33619,955 @@ Started PUT "/__web_console/repl_sessions/e1828801ef53a9a7336d204960c7da33" for 
   [1m[36mUser Load (4.6ms)[0m  [1mSELECT DISTINCT user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`[0m
   [1m[35mUser Load (5.2ms)[0m  SELECT DISTINCT user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`
   [1m[36mUser Load (6.4ms)[0m  [1mSELECT DISTINCT user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`[0m
+  [1m[36mUser Load (4.5ms)[0m  [1mSELECT DISTINCT user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`[0m
+  [1m[35mUser Load (5.4ms)[0m  SELECT DISTINCT users.name, user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT users.name, user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`[0m
+  [1m[35mUser Load (2.6ms)[0m  SELECT users.name, user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`
+  [1m[36mUser Load (2.4ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`[0m
+  [1m[35mUser Load (1.9ms)[0m  SELECT users.name as nnname, user_activities.activity as act FROM `users` LEFT JOIN user_activities ON users.id = user_activities.user_id
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT users.name as nnname, user_activities.activity as act FROM `users` LEFT JOIN user_activities ON users.id = user_activities.user_id[0m
+  [1m[35mUser Load (2.0ms)[0m  SELECT `users`.* FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT `users`.* FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`[0m
+  [1m[35mUser Load (1.7ms)[0m  SELECT users.name, user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`
+  [1m[36mUser Load (5.2ms)[0m  [1mSELECT  users.name, user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`  ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35mUser Load (1.8ms)[0m  SELECT users.name, user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`
+  [1m[36mUser Load (1.8ms)[0m  [1mSELECT users.name, user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`[0m
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-20 08:46:08 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+Completed 200 OK in 385ms (Views: 378.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-638646819ae56db43544e25be4877b30d46d61bd3ccc2a24aff9d241bee9a4f0.js?body=1" for 127.0.0.1 at 2017-12-20 08:46:09 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-20 08:46:20 +0300
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-20 08:46:23 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (2.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-20 08:46:28 +0300
+Processing by UserController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wJyDjIJ1neQ0oWoU9g0dovgFHLQgjGdKEHqPn87WLSeNL5/31s+J6rSnc4xTImJGk4Py0ti9SfFKARo7QWiCKg==", "email"=>"frunz24@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (1.5ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'frunz24@gmail.com' LIMIT 1
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 113ms (Views: 11.0ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 08:46:30 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.5ms)
+  Rendered shared/_flashes.html.erb (0.2ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:21:24 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-3d455006a0550e63d2bae8bb1413f6320964ab3208b537733b9c4ade9f3e99bf.js?body=1" for 127.0.0.1 at 2017-12-20 09:21:24 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:21:24 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:21:24 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:21:24 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:24:40 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-f3fd9a190cf019e38ec51818787ee3a0c350cfa94bb27dde46c8362ccd611c82.js?body=1" for 127.0.0.1 at 2017-12-20 09:24:40 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:24:40 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:24:40 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:24:40 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:25:00 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 22.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:25:00 +0300
+
+
+Started GET "/assets/hsh.self-f3fd9a190cf019e38ec51818787ee3a0c350cfa94bb27dde46c8362ccd611c82.js?body=1" for 127.0.0.1 at 2017-12-20 09:25:00 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:25:00 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:25:00 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:26:44 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-5d09076d3fc6f9c50000a3856f11e6a41c5d923ac97546eafcf8a81a7ccb42fb.js?body=1" for 127.0.0.1 at 2017-12-20 09:26:44 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:26:44 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:26:44 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:26:44 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:27:36 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-657161e21b0cd1aa867eb11066db39285efc4ffe1d2dcd209e1a65ac03ce8e50.js?body=1" for 127.0.0.1 at 2017-12-20 09:27:36 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:27:37 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:27:37 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:27:37 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:28:04 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-f8c329f6146728fca1e77df06630e341bf3b84e585640269acf23980b019983f.js?body=1" for 127.0.0.1 at 2017-12-20 09:28:04 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:28:04 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:28:04 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:28:04 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:28:11 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-f8c329f6146728fca1e77df06630e341bf3b84e585640269acf23980b019983f.js?body=1" for 127.0.0.1 at 2017-12-20 09:28:11 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:28:11 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:28:11 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:28:11 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:29:25 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-fc3813fcd474e974042071c3bb09eb3aebe199651a2b28222c8e3fe6fb8dd1c6.js?body=1" for 127.0.0.1 at 2017-12-20 09:29:25 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:29:25 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:29:25 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:29:25 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:31:09 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 16ms (Views: 15.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-e72d4f05a87dbb40694195f6492b07fdd2623694f952d645d2173dac10a1f6a0.js?body=1" for 127.0.0.1 at 2017-12-20 09:31:10 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:31:10 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:31:10 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:31:10 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:31:21 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-e72d4f05a87dbb40694195f6492b07fdd2623694f952d645d2173dac10a1f6a0.js?body=1" for 127.0.0.1 at 2017-12-20 09:31:21 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:31:21 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:31:21 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:31:21 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:31:23 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-e72d4f05a87dbb40694195f6492b07fdd2623694f952d645d2173dac10a1f6a0.js?body=1" for 127.0.0.1 at 2017-12-20 09:31:24 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:31:24 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:31:24 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:31:24 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:31:31 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 22.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-e72d4f05a87dbb40694195f6492b07fdd2623694f952d645d2173dac10a1f6a0.js?body=1" for 127.0.0.1 at 2017-12-20 09:31:31 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:31:31 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:31:31 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:31:31 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:31:34 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-e72d4f05a87dbb40694195f6492b07fdd2623694f952d645d2173dac10a1f6a0.js?body=1" for 127.0.0.1 at 2017-12-20 09:31:34 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:31:34 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:31:34 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:31:34 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:35:23 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-9ac65fccb50c70b04a9ec75b9694a2c03c4c76346fdb1f887ac68cb45ee6eb6c.js?body=1" for 127.0.0.1 at 2017-12-20 09:35:23 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:35:23 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:35:23 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:35:23 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:35:26 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-9ac65fccb50c70b04a9ec75b9694a2c03c4c76346fdb1f887ac68cb45ee6eb6c.js?body=1" for 127.0.0.1 at 2017-12-20 09:35:26 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:35:26 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:35:26 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:35:26 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:37:06 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.2ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-1673bf8a4d44aa0e793d0bae45fc7f38d39def874a6c2b557fbf1795f70168cd.js?body=1" for 127.0.0.1 at 2017-12-20 09:37:06 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:37:06 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:37:06 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:37:06 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:37:16 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-1673bf8a4d44aa0e793d0bae45fc7f38d39def874a6c2b557fbf1795f70168cd.js?body=1" for 127.0.0.1 at 2017-12-20 09:37:16 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:37:16 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:37:16 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:37:16 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:38:06 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-aefb95630c0d5e28f930afacb308a3d4cd059f7bfc2985a5a3f1ebf995f0b55a.js?body=1" for 127.0.0.1 at 2017-12-20 09:38:06 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:38:06 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:38:06 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:38:06 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:38:22 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-aefb95630c0d5e28f930afacb308a3d4cd059f7bfc2985a5a3f1ebf995f0b55a.js?body=1" for 127.0.0.1 at 2017-12-20 09:38:22 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:38:22 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:38:22 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:38:22 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:51:22 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-9e5ccbd5f887d37142bf8910a42fdc677f3cb544603dcee52240a023298d8c19.js?body=1" for 127.0.0.1 at 2017-12-20 09:51:22 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:51:22 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:51:22 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:51:22 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:51:48 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-5b1483d78993a14ba5e40d6f5611a2e02f11b34cd57a8a0fc92d4ad5bc3743e9.js?body=1" for 127.0.0.1 at 2017-12-20 09:51:48 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:51:48 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:51:48 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:51:48 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:52:06 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-f107d93918316f242781737bb71d94ba59ddfeae61fe95f91c79810e22788208.js?body=1" for 127.0.0.1 at 2017-12-20 09:52:06 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:52:06 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:52:06 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:52:06 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:52:43 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-f107d93918316f242781737bb71d94ba59ddfeae61fe95f91c79810e22788208.js?body=1" for 127.0.0.1 at 2017-12-20 09:52:43 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:52:43 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:52:43 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:52:43 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:54:30 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-5077585597f11200c3352e51842c497cfc1fdf190b16f19f9ed8c7f0c3b2d976.js?body=1" for 127.0.0.1 at 2017-12-20 09:54:30 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:54:30 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:54:30 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:54:30 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:54:57 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-d727ae537461aa093a8e61392c749d52070366d52a6446fb9a971bb10ea9cb03.js?body=1" for 127.0.0.1 at 2017-12-20 09:54:57 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:54:57 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:54:57 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:54:57 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:55:06 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-d727ae537461aa093a8e61392c749d52070366d52a6446fb9a971bb10ea9cb03.js?body=1" for 127.0.0.1 at 2017-12-20 09:55:06 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:55:06 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:55:06 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:55:06 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 09:55:19 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-d727ae537461aa093a8e61392c749d52070366d52a6446fb9a971bb10ea9cb03.js?body=1" for 127.0.0.1 at 2017-12-20 09:55:19 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 09:55:19 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 09:55:19 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 09:55:19 +0300
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-20 09:55:34 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.7ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-20 09:55:43 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ivcwNjTglQkArj2inJyCzDrGh8uZAnvvYZLUKw8N6rzHRCxNYFqBB4CoJDo5s/0oUUBprWEzVVQ76UGPgLNFsQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh" for 127.0.0.1 at 2017-12-20 09:56:17 +0300
+Processing by StaticPagesController#array as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZcHC0+pR+4CUxYHlszQi7hil0WfEqaVIDYzgLIBHJq8oct6ovuvvjhTDmH0WG10KcyM/ATyYi/NX93WID/mJog==", "commit"=>"Get array"}
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get array', '2017-12-20 06:56:17', '2017-12-20 06:56:17')
+  [1m[36m (45.1ms)[0m  [1mCOMMIT[0m
+  Rendered static_pages/hsh.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 73ms (Views: 11.0ms | ActiveRecord: 53.1ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:00:32 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-0a9a86698acb27eb237a2fce8f7e86d7be8e644d0661f19de1f5037ef82a5c9c.js?body=1" for 127.0.0.1 at 2017-12-20 10:00:32 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:00:57 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-a2f309ee1306af245a14d5b97ba8f8e7cef6a5148b7e5186e08461f78df57756.js?body=1" for 127.0.0.1 at 2017-12-20 10:00:57 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 10:00:57 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 10:00:57 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 10:00:57 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:01:01 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-a2f309ee1306af245a14d5b97ba8f8e7cef6a5148b7e5186e08461f78df57756.js?body=1" for 127.0.0.1 at 2017-12-20 10:01:01 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 10:01:01 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 10:01:01 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 10:01:01 +0300
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-20 10:01:14 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-6e1809a65618b349b99c6a74ce4bee8ff2ae875b42d39e9559a56a784d70504c.js?body=1" for 127.0.0.1 at 2017-12-20 10:01:14 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:01:15 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:01:20 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-6e1809a65618b349b99c6a74ce4bee8ff2ae875b42d39e9559a56a784d70504c.js?body=1" for 127.0.0.1 at 2017-12-20 10:01:20 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 10:01:20 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 10:01:20 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 10:01:20 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:02:48 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-0d77025a04f21b2838f32eb170dd84c6883820f6d737ef069335fa32fe5026aa.js?body=1" for 127.0.0.1 at 2017-12-20 10:02:48 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 10:02:48 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 10:02:48 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 10:02:48 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:02:50 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 10:02:50 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 10:02:50 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 10:02:50 +0300
+
+
+Started GET "/assets/hsh.self-0d77025a04f21b2838f32eb170dd84c6883820f6d737ef069335fa32fe5026aa.js?body=1" for 127.0.0.1 at 2017-12-20 10:02:50 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:02:50 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-0d77025a04f21b2838f32eb170dd84c6883820f6d737ef069335fa32fe5026aa.js?body=1" for 127.0.0.1 at 2017-12-20 10:02:50 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 10:02:50 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 10:02:50 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 10:02:50 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:02:51 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-0d77025a04f21b2838f32eb170dd84c6883820f6d737ef069335fa32fe5026aa.js?body=1" for 127.0.0.1 at 2017-12-20 10:02:51 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 10:02:51 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 10:02:51 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 10:02:51 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:02:53 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-0d77025a04f21b2838f32eb170dd84c6883820f6d737ef069335fa32fe5026aa.js?body=1" for 127.0.0.1 at 2017-12-20 10:02:53 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 10:02:53 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 10:02:53 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 10:02:53 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-20 10:04:16 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.8ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+Completed 200 OK in 243ms (Views: 235.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-12-20 10:04:21 +0300
+Processing by UserController#logout as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-20 10:04:23 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-20 10:04:25 +0300
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-20 10:04:37 +0300
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.2ms)
+Completed 200 OK in 9ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-20 10:04:39 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (0.7ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-20 10:04:41 +0300
+Processing by UserController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zZMuy/a0a6uNxi/rbFfE69sKs5zzV/Sjw0GP/c3sy66hSLuuMNskRo/DXyIBkVI0CXmcwFwoaqEIpIXqLubakw==", "email"=>"frunz24@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (1.8ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'frunz24@gmail.com' LIMIT 1
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 109ms (Views: 11.5ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:04:43 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:04:53 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:07:48 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.2ms)
+  Rendered shared/_flashes.html.erb (0.6ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-2ef2bc110ae33727097b4454efc9b6e3e3481f5c850466a5d6c820cba4f704e9.js?body=1" for 127.0.0.1 at 2017-12-20 10:07:48 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 10:07:48 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 10:07:48 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 10:07:48 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:09:37 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-e0ce6cd7a1c3303429547f0134851dd286cbeec6194edc76b066c4f45b6122fc.js?body=1" for 127.0.0.1 at 2017-12-20 10:09:37 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 10:09:37 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 10:09:37 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 10:09:37 +0300
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-20 10:09:45 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (2.7ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh" for 127.0.0.1 at 2017-12-20 10:09:48 +0300
+Processing by StaticPagesController#array as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aUpm4zZN0TtdbXTvgMByb1iF1TMeYfgKVZUQxyDFN5YFkfOG8CKe1l9oBCbtBuSwivb6b7EeZgiecBrQw88mqw==", "commit"=>"Get array"}
+  [1m[36m (1.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get array', '2017-12-20 07:09:48', '2017-12-20 07:09:48')
+  [1m[36m (38.5ms)[0m  [1mCOMMIT[0m
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 68ms (Views: 11.3ms | ActiveRecord: 47.2ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:09:50 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:10:45 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-20cddf4c777e11342be16181f42bc4ce6d292e277d470cf4cd9b4a4087bdd68d.js?body=1" for 127.0.0.1 at 2017-12-20 10:10:45 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 10:10:45 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 10:10:45 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 10:10:45 +0300
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-20 10:11:07 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh" for 127.0.0.1 at 2017-12-20 10:11:09 +0300
+Processing by StaticPagesController#array as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+kpWyeW3SjwwVMjjc1dbI/bM82ZyDKJJ7eKn7u+LNnGWkcOsI9gF0TJRuCoekc38JL/cOt1zPEsmB635DIEnTA==", "commit"=>"Get array"}
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get array', '2017-12-20 07:11:09', '2017-12-20 07:11:09')[0m
+  [1m[35m (52.5ms)[0m  COMMIT
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 68ms (Views: 11.4ms | ActiveRecord: 54.2ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 10:11:16 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-20 10:11:23 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
