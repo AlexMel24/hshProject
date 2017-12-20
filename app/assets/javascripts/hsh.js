@@ -96,16 +96,20 @@ Hsh.prototype.showHash = function (varhsh, newLine) {
 function Arr () {
 
     ar = [];
+    arNonil = [];
     this.getArr = function (varhsh) {
         var tempHsh = varhsh;
-        var key
+        var key;
         for (key in tempHsh) {
             if (typeof tempHsh[key] !== 'object')
             {
                 var tHsh = {};
                 tHsh[key] = tempHsh[key];
-                //alert (key);
-                //alert (tHsh[key]);
+
+                    if (tempHsh[key] != 'nil')
+                    {
+                        arNonil.push(tHsh);
+                    }
                 ar.push(tHsh);
             }
             else
@@ -115,21 +119,60 @@ function Arr () {
         }
     }
 
-    this.printAr = function () {
-        var i;
-        var res = '';
-        for (i in ar)
-        {
+    this.returnAr = function () {
+        return ar;
+    }
+    this.returnArNonil = function () {
+        return arNonil;
+    }
 
+    this.getMax = function () {
+        var arOfMax = [];
+        var maxVal = -1;
+        var i;
+        for (i in arNonil)
+        {
             var key;
-            for (key in ar[i])
+            for (key in arNonil[i])
             {
-                res += '"' + key.toString() + '"=>';
-                res += ar[i][key].toString() + ',';
+                if (arNonil[i][key] > maxVal)
+                {
+                    maxVal = arNonil[i][key];
+                }
             }
         }
-        return res.slice(0, -1);
+
+        i = 0;
+        for (i in arNonil)
+        {
+            key = '';
+            for (key in arNonil[i])
+            {
+                if (arNonil[i][key] == maxVal)
+                {
+                    arOfMax.push(arNonil[i]);
+                }
+            }
+        }
+        return arOfMax;
     }
+
+
+}
+var printAr = function (array) {
+    var i;
+    var res = '';
+    for (i in array)
+    {
+
+        var key;
+        for (key in array[i])
+        {
+            res += '"' + key.toString() + '"=>';
+            res += array[i][key].toString() + ',';
+        }
+    }
+    return res.slice(0, -1);
 }
 
 
@@ -138,8 +181,6 @@ Arr.prototype = new Hsh();
 displayHash = function() {
 
     hs = new Arr();
-    var prear = document.getElementById('array');
-    prear.innerHTML = '';
 
     t = hs.newHashElement(3);
     h = hs.createHash(t);
@@ -147,19 +188,18 @@ displayHash = function() {
     hs.showHash(h,'');
     var prehs = document.getElementById('init');
     prehs.innerHTML = hs.out;
-
-
-}
-
-printArrray = function () {
     var prear = document.getElementById('array');
-    prear.innerHTML = hs.printAr()
+    prear.innerHTML = printAr(hs.returnAr());
+    var arnonil = document.getElementById('array_nonil');
+    arnonil.innerHTML = printAr(hs.returnArNonil());
+    var armax = document.getElementById('array_max');
+    armax.innerHTML = printAr(hs.getMax());
+
 }
 
 window.onload = function() {
     displayHash();
     but = document.getElementById('button1');
     but.addEventListener('click',displayHash,true);
-    but2 = document.getElementById('button2');
-    but2.addEventListener('click',printArrray,true);
+
 }
