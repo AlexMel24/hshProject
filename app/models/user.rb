@@ -1,3 +1,4 @@
+# model for table 'users'
 class User < ActiveRecord::Base
 
   has_many :user_activity

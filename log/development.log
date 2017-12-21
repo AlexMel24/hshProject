@@ -36066,3 +36066,1053 @@ ActionView::Template::Error (undefined method `errors' for nil:NilClass):
   Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
   Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
   Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-20 11:47:19 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (1.8ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+Completed 200 OK in 207ms (Views: 199.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-20 11:47:20 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:47:21 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (2.0ms)
+  Rendered user/register.html.erb within layouts/application (4.8ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 16.4ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:47:40 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered user/register.html.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (Association named 'user_activities' was not found on User; perhaps you misspelled it?):
+    32:   </div>
+    33: </div>
+    34: <div>
+    35:   <%= @us2.activity %>
+    36: </div>
+  app/views/user/register.html.erb:35:in `_app_views_user_register_html_erb___872263413629084349_69900331685900'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.0ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:48:33 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[35mUser Load (2.0ms)[0m  SELECT users.name, user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`
+  Rendered user/register.html.erb within layouts/application (36.4ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 8.4ms)
+
+ActionView::Template::Error (undefined method `activity' for #<User::ActiveRecord_Relation:0x007f25e1991660>):
+    32:   </div>
+    33: </div>
+    34: <div>
+    35:   <%= @us2.activity %>
+    36: </div>
+  app/views/user/register.html.erb:35:in `_app_views_user_register_html_erb___872263413629084349_69900331685900'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (20.0ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.9ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.8ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:48:59 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered user/register.html.erb within layouts/application (4.6ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:48:59 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:48:59 +0300
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:48:59 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:48:59 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:49:00 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered user/register.html.erb within layouts/application (2.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:49:00 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:00 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:00 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:00 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:49:01 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered user/register.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:01 +0300
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:49:01 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:01 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:01 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:49:01 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered user/register.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:49:01 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:01 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:01 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:01 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered user/register.html.erb within layouts/application (2.7ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered user/register.html.erb within layouts/application (7.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered user/register.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered user/register.html.erb within layouts/application (2.6ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered user/register.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.2ms)
+  Rendered user/register.html.erb within layouts/application (1.8ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:02 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:49:14 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered user/register.html.erb within layouts/application (6.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:49:14 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:14 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:14 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:49:14 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:49:48 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT users.name, user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`[0m
+  Rendered user/register.html.erb within layouts/application (7.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.0ms)
+
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    32:   </div>
+    33: </div>
+    34: <div>
+    35:   <%= @us2[:activity] %>
+    36: </div>
+  app/views/user/register.html.erb:35:in `_app_views_user_register_html_erb___872263413629084349_69900338485120'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.1ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.7ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:50:08 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[35mUser Load (2.4ms)[0m  SELECT users.name, user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`
+  Rendered user/register.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.4ms)
+
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    32:   </div>
+    33: </div>
+    34: <div>
+    35:   <%= @us2[:activity].to_s %>
+    36: </div>
+  app/views/user/register.html.erb:35:in `_app_views_user_register_html_erb___872263413629084349_69900190100040'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.0ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.2ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:50:09 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  [1m[36mUser Load (2.3ms)[0m  [1mSELECT users.name, user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`[0m
+  Rendered user/register.html.erb within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 2.3ms)
+
+ActionView::Template::Error (no implicit conversion of Symbol into Integer):
+    32:   </div>
+    33: </div>
+    34: <div>
+    35:   <%= @us2[:activity].to_s %>
+    36: </div>
+  app/views/user/register.html.erb:35:in `_app_views_user_register_html_erb___872263413629084349_69900190100040'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (25.7ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:50:22 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered user/register.html.erb within layouts/application (2.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:50:22 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:50:22 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:50:22 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:50:22 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:50:55 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered user/register.html.erb within layouts/application (4.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:50:55 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:50:55 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:50:55 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:50:55 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:51:27 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  [1m[35mUser Load (3.1ms)[0m  SELECT users.name, user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`
+  Rendered user/register.html.erb within layouts/application (17.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 34.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:51:27 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:51:27 +0300
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:51:27 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:51:27 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:52:03 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.2ms)
+  [1m[36mUser Load (4.7ms)[0m  [1mSELECT users.name, user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`[0m
+  Rendered user/register.html.erb within layouts/application (15.7ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 28.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:52:04 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:52:04 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:52:04 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:52:04 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:57:27 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[35mUser Load (1.8ms)[0m  SELECT users.name, user_activities.activity FROM `users` INNER JOIN user_activities on user_activities.user_id = users.id
+  Rendered user/register.html.erb within layouts/application (7.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 18.7ms | ActiveRecord: 8.7ms)
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:57:27 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:57:27 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:57:27 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:57:27 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:57:28 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  [1m[36mUser Load (1.9ms)[0m  [1mSELECT users.name, user_activities.activity FROM `users` INNER JOIN user_activities on user_activities.user_id = users.id[0m
+  Rendered user/register.html.erb within layouts/application (7.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 19.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:57:28 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:57:28 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:57:28 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:57:28 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:57:29 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[35mUser Load (2.5ms)[0m  SELECT users.name, user_activities.activity FROM `users` INNER JOIN user_activities on user_activities.user_id = users.id
+  Rendered user/register.html.erb within layouts/application (7.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:57:29 +0300
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:57:29 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:57:29 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:57:29 +0300
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-20 11:57:35 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+Completed 200 OK in 181ms (Views: 173.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-20 11:57:37 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (1.6ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:57:38 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (1.4ms)
+  [1m[35mUser Load (1.8ms)[0m  SELECT users.name, user_activities.activity FROM `users` INNER JOIN user_activities on user_activities.user_id = users.id
+  Rendered user/register.html.erb within layouts/application (12.8ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 21.6ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:58:22 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[36mUser Load (5.5ms)[0m  [1mSELECT DISTINCT users.name, user_activities.activity FROM `users` INNER JOIN user_activities on user_activities.user_id = users.id[0m
+  Rendered user/register.html.erb within layouts/application (8.7ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 32ms (Views: 14.4ms | ActiveRecord: 12.8ms)
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 11:58:22 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 11:58:22 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 11:58:22 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 11:58:22 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 11:59:15 +0300
+Processing by UserController#register as HTML
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  [1m[35mUser Load (5.5ms)[0m  SELECT DISTINCT users.name, user_activities.activity FROM `users` INNER JOIN user_activities on user_activities.user_id = users.id
+  Rendered user/register.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 5.5ms)
+
+ActionView::Template::Error (undefined method `activity' for #<User::ActiveRecord_Relation:0x007fa9ddb3b558>):
+    32:   </div>
+    33: </div>
+    34: <div>
+    35:   <%= @us2.activity %>
+    36: </div>
+  app/views/user/register.html.erb:35:in `_app_views_user_register_html_erb___873669267987144417_70183772847220'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.7ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.3ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 12:01:10 +0300
+Processing by UserController#register as HTML
+  [1m[36mUser Load (5.4ms)[0m  [1mSELECT DISTINCT users.name, user_activities.activity FROM `users` INNER JOIN user_activities on user_activities.user_id = users.id[0m
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered user/register.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 12.9ms)
+
+ActionView::Template::Error (undefined method `activity' for #<Array:0x007fa9dca03790>):
+    32:   </div>
+    33: </div>
+    34: <div>
+    35:   <%= @us2.activity %>
+    36: </div>
+  app/views/user/register.html.erb:35:in `_app_views_user_register_html_erb___873669267987144417_70183772847220'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.1ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.9ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 12:01:12 +0300
+Processing by UserController#register as HTML
+  [1m[35mUser Load (6.7ms)[0m  SELECT DISTINCT users.name, user_activities.activity FROM `users` INNER JOIN user_activities on user_activities.user_id = users.id
+  Rendered shared/_error_messages.html.erb (0.4ms)
+  Rendered user/register.html.erb within layouts/application (8.8ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 6.7ms)
+
+ActionView::Template::Error (undefined method `activity' for #<Array:0x007fa9de3a3718>):
+    32:   </div>
+    33: </div>
+    34: <div>
+    35:   <%= @us2.activity %>
+    36: </div>
+  app/views/user/register.html.erb:35:in `_app_views_user_register_html_erb___873669267987144417_70183772847220'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.0ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.1ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.8ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 12:01:17 +0300
+Processing by UserController#register as HTML
+  [1m[36mUser Load (6.3ms)[0m  [1mSELECT DISTINCT users.name, user_activities.activity FROM `users` INNER JOIN user_activities on user_activities.user_id = users.id[0m
+  Rendered shared/_error_messages.html.erb (0.0ms)
+  Rendered user/register.html.erb within layouts/application (4.1ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 6.3ms)
+
+ActionView::Template::Error (undefined method `activity' for #<Array:0x007fa9de13ada0>):
+    32:   </div>
+    33: </div>
+    34: <div>
+    35:   <%= @us2.activity %>
+    36: </div>
+  app/views/user/register.html.erb:35:in `_app_views_user_register_html_erb___873669267987144417_70183772847220'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.7ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (28.6ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 12:01:18 +0300
+Processing by UserController#register as HTML
+  [1m[35mUser Load (6.0ms)[0m  SELECT DISTINCT users.name, user_activities.activity FROM `users` INNER JOIN user_activities on user_activities.user_id = users.id
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered user/register.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 6.0ms)
+
+ActionView::Template::Error (undefined method `activity' for #<Array:0x007fa9dd9cda68>):
+    32:   </div>
+    33: </div>
+    34: <div>
+    35:   <%= @us2.activity %>
+    36: </div>
+  app/views/user/register.html.erb:35:in `_app_views_user_register_html_erb___873669267987144417_70183772847220'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.7ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (27.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 12:01:19 +0300
+Processing by UserController#register as HTML
+  [1m[36mUser Load (5.6ms)[0m  [1mSELECT DISTINCT users.name, user_activities.activity FROM `users` INNER JOIN user_activities on user_activities.user_id = users.id[0m
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered user/register.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 5.6ms)
+
+ActionView::Template::Error (undefined method `activity' for #<Array:0x007fa9dcfb0300>):
+    32:   </div>
+    33: </div>
+    34: <div>
+    35:   <%= @us2.activity %>
+    36: </div>
+  app/views/user/register.html.erb:35:in `_app_views_user_register_html_erb___873669267987144417_70183772847220'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (21.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (29.1ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 12:01:34 +0300
+Processing by UserController#register as HTML
+  [1m[35mUser Load (6.1ms)[0m  SELECT DISTINCT users.name, user_activities.activity FROM `users` INNER JOIN user_activities on user_activities.user_id = users.id
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered user/register.html.erb within layouts/application (3.6ms)
+  Rendered shared/_flashes.html.erb (0.2ms)
+Completed 200 OK in 29ms (Views: 20.7ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 12:01:34 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 12:01:34 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 12:01:34 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 12:01:34 +0300
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 12:02:05 +0300
+Processing by UserController#register as HTML
+  [1m[36mUser Load (6.8ms)[0m  [1mSELECT DISTINCT users.name, user_activities.activity FROM `users` INNER JOIN user_activities on user_activities.user_id = users.id[0m
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered user/register.html.erb within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 6.8ms)
+
+ActionView::Template::Error (undefined method `to_hash' for #<Array:0x007fa9de0e6250>
+Did you mean?  to_h):
+    32:   </div>
+    33: </div>
+    34: <div>
+    35:   <%= @us2.to_hash %>
+    36: </div>
+  app/views/user/register.html.erb:35:in `_app_views_user_register_html_erb___873669267987144417_70183775835540'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (13.0ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.5ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 12:02:12 +0300
+Processing by UserController#register as HTML
+  [1m[35mUser Load (5.9ms)[0m  SELECT DISTINCT users.name, user_activities.activity FROM `users` INNER JOIN user_activities on user_activities.user_id = users.id
+  Rendered shared/_error_messages.html.erb (0.1ms)
+  Rendered user/register.html.erb within layouts/application (4.5ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 5.9ms)
+
+ActionView::Template::Error (wrong element type User at 0 (expected array)):
+    32:   </div>
+    33: </div>
+    34: <div>
+    35:   <%= @us2.to_h %>
+    36: </div>
+  app/views/user/register.html.erb:35:in `to_h'
+  app/views/user/register.html.erb:35:in `_app_views_user_register_html_erb___873669267987144417_70183770708180'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (12.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-20 14:21:18 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+Completed 200 OK in 203ms (Views: 195.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-20 14:21:21 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (2.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 33.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-20 14:21:24 +0300
+Processing by UserController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GA/IMz/mdeGwQd6uFWXj9Dnjx/ENAG5PWyRSkVO5X7sZbPmW4EVRpea6q+Jwj4d77HxZ9z94c9WhQGrRGxd0/A==", "email"=>"qwerty@mail.ru", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (1.6ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'qwerty@mail.ru' LIMIT 1
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 124ms (Views: 12.3ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-20 14:21:25 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (3.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-20 14:21:27 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-20 14:21:42 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (2.7ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh" for 127.0.0.1 at 2017-12-20 14:21:43 +0300
+Processing by StaticPagesController#array as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bFEdUNHBVV90QgdVKZ6DjRyWugpeIGnavwAqUoBFTTVtMiz1DmJxGyK5chlMdOcCyQkkDGxYdEBFZBISyOtmcg==", "commit"=>"Get array"}
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (34817, 'Get array', '2017-12-20 11:21:44', '2017-12-20 11:21:44')
+  [1m[36m (44.3ms)[0m  [1mCOMMIT[0m
+  Rendered static_pages/hsh.html.erb within layouts/application (1.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 87ms (Views: 11.9ms | ActiveRecord: 52.1ms)
+
+
+Started POST "/hsh/max" for 127.0.0.1 at 2017-12-20 14:21:45 +0300
+Processing by StaticPagesController#get_max as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pyKyqaN+viMnmQ33X73KL213gLMDKoKa0cRmRH3JKPmmQYMMfN2aZ3FieLs6V66guOgetTFSnwAroF4ENWcDvg==", "commit"=>"Get max"}
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (34817, 'Get max', '2017-12-20 11:21:45', '2017-12-20 11:21:45')[0m
+  [1m[35m (67.7ms)[0m  COMMIT
+  Rendered static_pages/hsh.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 83ms (Views: 11.4ms | ActiveRecord: 69.4ms)
+
+
+Started POST "/hsh/nonill" for 127.0.0.1 at 2017-12-20 14:21:46 +0300
+Processing by StaticPagesController#no_nill as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pliw3RidRYMI8zCJPEiqlsj9zIcbWM2KbF7NoKhglWunO4F4xz5hx14IRcVZos4ZHWJSgSkg0BCWOvXg4M6+LA==", "commit"=>"Get nonill array"}
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (34817, 'Get no nil array', '2017-12-20 11:21:46', '2017-12-20 11:21:46')
+  [1m[36m (43.8ms)[0m  [1mCOMMIT[0m
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 9.8ms | ActiveRecord: 45.5ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-20 14:21:52 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PbWPsJCac5xSdxo8R0uOqAqdhj/QkZt1fNrLm1logxc81r4VTzlX2ASMb3Aioeon3wIYOeLphu+GvvPbEcaoUA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh" for 127.0.0.1 at 2017-12-20 14:21:54 +0300
+Processing by StaticPagesController#array as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dN2txoDhPo7hBr6t6GI/AD4D4+UYA9UCFWqV3Zg8t7V1vpxjX0Iayrf9y+GNiFuP65x94yp7yJjvDq2d0JKc8g==", "commit"=>"Get array"}
+  [1m[35m (1.0ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (34817, 'Get array', '2017-12-20 11:21:54', '2017-12-20 11:21:54')[0m
+  [1m[35m (44.7ms)[0m  COMMIT
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 63ms (Views: 13.6ms | ActiveRecord: 46.7ms)
+
+
+Started POST "/hsh/max" for 127.0.0.1 at 2017-12-20 14:21:57 +0300
+Processing by StaticPagesController#get_max as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IVznkqxAgqD6f5wx4qh9gDpgkNds+pGu/GMMAK4uu3EgP9Y3c+Om5KyE6X2HQhkP7/8O0V6CjDQGBzRA5oCQNg==", "commit"=>"Get max"}
+  [1m[36m (0.8ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (34817, 'Get max', '2017-12-20 11:21:57', '2017-12-20 11:21:57')
+  [1m[36m (44.3ms)[0m  [1mCOMMIT[0m
+  Rendered static_pages/hsh.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 64ms (Views: 15.5ms | ActiveRecord: 46.2ms)
+
+
+Started POST "/hsh/nonill" for 127.0.0.1 at 2017-12-20 14:21:58 +0300
+Processing by StaticPagesController#no_nill as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xppnaGWPVldzkqqspyGyxYNBD2z0CGUAZJeQrV5LJNPH+VbNuixyEyVp3+DCy9ZKVt6RasZweJqe86jtFuUPlA==", "commit"=>"Get nonill array"}
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (34817, 'Get no nil array', '2017-12-20 11:21:58', '2017-12-20 11:21:58')[0m
+  [1m[35m (33.4ms)[0m  COMMIT
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 47ms (Views: 9.9ms | ActiveRecord: 35.0ms)
+
+
+Started POST "/hsh" for 127.0.0.1 at 2017-12-20 14:21:59 +0300
+Processing by StaticPagesController#array as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yrgivETJVRVsyOYfRGmyK0ieHBIhvru49P7UV83YldHL2xMZm2pxUTozk1Mhg9aknQGCFBPGpiIOmuwXhXa+lg==", "commit"=>"Get array"}
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (34817, 'Get array', '2017-12-20 11:21:59', '2017-12-20 11:21:59')
+  [1m[36m (35.1ms)[0m  [1mCOMMIT[0m
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 49ms (Views: 10.6ms | ActiveRecord: 36.7ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-20 14:22:01 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GwsoFszMxIywifJypRZtzag4iAGvuGKf7QBsNgndYK8aaBmzE2/gyOZyhz7A/AlCfacWB53AfwUXZFR2QXNL6A==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-12-20 14:22:03 +0300
+Processing by UserController#logout as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-20 14:39:07 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (1.5ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+Completed 200 OK in 177ms (Views: 169.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-20 14:39:09 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 28.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 14:39:10 +0300
+Processing by UserController#register as HTML
+  [1m[35mUser Load (4.9ms)[0m  select distinct
+        users.name,
+        user_activities.activity
+        from users
+        INNER JOIN user_activities on user_activities.user_id = users.id
+        WHERE users.name = 'Alex'
+  Rendered shared/_error_messages.html.erb (1.6ms)
+  Rendered user/register.html.erb within layouts/application (3.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 37ms (Views: 13.3ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2017-12-20 14:39:53 +0300
+Processing by UserController#register as HTML
+  [1m[36mUser Load (5.1ms)[0m  [1mselect distinct
+        users.name,
+        user_activities.activity
+        from users
+        INNER JOIN user_activities on user_activities.user_id = users.id
+        WHERE users.name = 'Alex'[0m
+  Rendered shared/_error_messages.html.erb (0.3ms)
+  Rendered user/register.html.erb within layouts/application (5.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 22.6ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/assets/hsh.self-f5e21a4c23f3469a9940cc684348a3557450a874b391522e0b7349476a4a143f.js?body=1" for 127.0.0.1 at 2017-12-20 14:39:53 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-20 14:39:53 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-20 14:39:53 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-20 14:39:53 +0300
+  [1m[36mUser Load (5.0ms)[0m  [1mSELECT DISTINCT users.name, user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`[0m
+  [1m[35mUser Load (5.8ms)[0m  SELECT DISTINCT users.name, user_activities.activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`
+  [1m[36mUser Load (5.2ms)[0m  [1mSELECT DISTINCT users.name as name, user_activities.activity as activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`[0m
+  [1m[35mUser Load (8.8ms)[0m  SELECT users.name as name, count(user_activities.activity) as activityNum FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id` GROUP BY `users`.`name`
+  [1m[36m (1.4ms)[0m  [1mSELECT activityNum FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id` GROUP BY `users`.`name`[0m
