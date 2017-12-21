@@ -37116,3 +37116,1275 @@ Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae4
   [1m[36mUser Load (5.2ms)[0m  [1mSELECT DISTINCT users.name as name, user_activities.activity as activity FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id`[0m
   [1m[35mUser Load (8.8ms)[0m  SELECT users.name as name, count(user_activities.activity) as activityNum FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id` GROUP BY `users`.`name`
   [1m[36m (1.4ms)[0m  [1mSELECT activityNum FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id` GROUP BY `users`.`name`[0m
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-21 11:51:03 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.8ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+Completed 200 OK in 212ms (Views: 204.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-21 11:51:05 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-21 11:51:10 +0300
+Processing by UserController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rhn+yeQ/9Es4mdUbaWNh2zelVOyk+zd7kRXctsoipsOJOkavX+E8zduzuHLwd3MfVVzz0s4EUxgaMUSJjpaB1w==", "email"=>"qqqqqq12@mail.ru", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (1.2ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'qqqqqq12@mail.ru' LIMIT 1
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 110ms (Views: 9.6ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-21 11:51:16 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 11:51:17 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"F7SZbcC2EW/K2n4rT5mB2Hxj7p6TyYv8h9KCzl15sezYlyELe2jZ6SnwE0LWjZMcHppJoPk2758M9hrxGc2W+A==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh" for 127.0.0.1 at 2017-12-21 11:51:18 +0300
+Processing by StaticPagesController#array as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AroRFMHxLtB6FXlWIR/7QZeB+otVNx1t4QSpyEe5dh3Nmalyei/mVpk/FD+4C+mF9XhdtT/IeQ5qIDH3Aw1RCQ==", "commit"=>"Get array"}
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (45057, 'Get array', '2017-12-21 08:51:18', '2017-12-21 08:51:18')
+  [1m[36m (41.4ms)[0m  [1mCOMMIT[0m
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 69ms (Views: 10.4ms | ActiveRecord: 49.0ms)
+
+
+Started POST "/hsh/max" for 127.0.0.1 at 2017-12-21 11:51:20 +0300
+Processing by StaticPagesController#get_max as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mg1PLUbHzOsin9i5CN+qTT1BqKpLPezgtb9ZKrL+zC9VLvdL/RkEbcG1tdCRy7iJX7gPlCHCiIM+m8EV9krrOw==", "commit"=>"Get max"}
+  [1m[35m (0.7ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (45057, 'Get max', '2017-12-21 08:51:20', '2017-12-21 08:51:20')[0m
+  [1m[35m (32.6ms)[0m  COMMIT
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 47ms (Views: 10.4ms | ActiveRecord: 34.2ms)
+
+
+Started POST "/hsh/nonill" for 127.0.0.1 at 2017-12-21 11:51:21 +0300
+Processing by StaticPagesController#no_nill as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dNuUCbCUROoZ0czNESODRy4vw6Zyj61QczLe1B5dj3S7+CxvC0qMbPr7oaSIN5GDTNZkmBhwyTP4FkbrWumoYA==", "commit"=>"Get nonill array"}
+  [1m[36m (1.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (45057, 'Get no nil array', '2017-12-21 08:51:21', '2017-12-21 08:51:21')
+  [1m[36m (45.1ms)[0m  [1mCOMMIT[0m
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 9.3ms | ActiveRecord: 47.4ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-12-21 11:51:28 +0300
+Processing by UserController#logout as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (4.9ms)[0m  [1mSELECT users.name as name, count(user_activities.activity) as activityNum FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id` GROUP BY `users`.`name`[0m
+  [1m[35mUser Load (6.5ms)[0m  SELECT users.name as name, count(user_activities.activity) as activityNum FROM `users` INNER JOIN `user_activities` ON `user_activities`.`user_id` = `users`.`id` GROUP BY `users`.`name`
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-21 14:40:23 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.5ms)
+Completed 200 OK in 246ms (Views: 239.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-1585880d3f8c04a957ce1d998b2fb1bfdfcaafdbdede0cbe1ab1d1c4ea19de71.js?body=1" for 127.0.0.1 at 2017-12-21 14:40:24 +0300
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-21 14:40:25 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-21 14:40:29 +0300
+Processing by UserController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"upBY7jJ9Ijiw3fhtuU/ttPP8Jry94w9ojq9T4owpLByiPcBEcWq7VsgZt/0foos2r0Ze2xInMwUERXc89vZwlg==", "email"=>"frunz24@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (1.4ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'frunz24@gmail.com' LIMIT 1
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 134ms (Views: 19.8ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-21 14:40:32 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 25ms (Views: 24.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-21 14:41:24 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-21 14:41:25 +0300
+
+
+Started GET "/assets/hsh.self-1585880d3f8c04a957ce1d998b2fb1bfdfcaafdbdede0cbe1ab1d1c4ea19de71.js?body=1" for 127.0.0.1 at 2017-12-21 14:41:25 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-21 14:41:25 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-21 14:41:25 +0300
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-21 14:42:22 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (0.6ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-21 14:42:40 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.2ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-21 14:42:50 +0300
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-12-21 14:42:51 +0300
+Processing by UserController#logout as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-21 14:42:52 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (0.6ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-21 14:43:00 +0300
+Processing by UserController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a1n+MYAMIGaBFip4PmUtlB65T3Ieg2tPabsiPeAAo3SQushpdH1gMn92v56e1dvvMgiRC8YKkhTHaBrfkGpOfQ==", "email"=>"frunz24@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (2.0ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'frunz24@gmail.com' LIMIT 1[0m
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 93ms (Views: 14.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-21 14:43:03 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-12-21 14:43:06 +0300
+Processing by UserController#logout as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-21 14:43:10 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+Redirected to http://0.0.0.0:3000/login
+Filter chain halted as :is_user_loged? rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-21 14:43:10 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (0.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-21 14:43:15 +0300
+Processing by UserController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7b8tHuuouaHqdNqEQTYp2AhX72NlvzuFjkGwmnhb0rrtYybXWSblY+8qwfTUIjr6JE3E3sfyVb7D3RzoitmkEw==", "email"=>"frunz24@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'frunz24@gmail.com' LIMIT 1
+  Rendered static_pages/welcome.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 89ms (Views: 10.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-21 14:43:16 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-21 14:43:57 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-1585880d3f8c04a957ce1d998b2fb1bfdfcaafdbdede0cbe1ab1d1c4ea19de71.js?body=1" for 127.0.0.1 at 2017-12-21 14:43:57 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-21 14:43:57 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-21 14:43:57 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-21 14:43:57 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-21 14:50:46 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.2ms)
+  Rendered shared/_flashes.html.erb (0.2ms)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-896210bca738780bb2ffdaa636519062030584880e67271b87871a0a0151b74c.js?body=1" for 127.0.0.1 at 2017-12-21 14:50:46 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-21 14:50:46 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-21 14:50:46 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-21 14:50:46 +0300
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-21 14:54:00 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/hsh.self-c28dee21c9ba1289461c0b4eaaee2eaafe87081700cc16dcab83b3ad8ea656a2.js?body=1" for 127.0.0.1 at 2017-12-21 14:54:00 +0300
+
+
+Started GET "/assets/custom.self-2297062b49f13aba5d5554e776ff8af1f8f882ae1846161adeaeb84b26ffd8dc.css?body=1" for 127.0.0.1 at 2017-12-21 14:54:00 +0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-12-21 14:54:00 +0300
+
+
+Started GET "/assets/java_script_hash.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2017-12-21 14:54:00 +0300
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-12-21 14:54:21 +0300
+Processing by UserController#logout as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-21 14:54:23 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (0.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-21 14:54:26 +0300
+Processing by UserController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VhygJWRryTrJ8QUzpqPtdQdfHJ6vRvCHDYABwbrwN3qkjgrm9WwfaJEz9ivWRc4Ov7RMcHvANRGgHlVv5YWWVw==", "email"=>"frunz24@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mUser Load (1.3ms)[0m  [1mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'frunz24@gmail.com' LIMIT 1[0m
+  Rendered static_pages/welcome.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 83ms (Views: 13.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-21 14:54:28 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-21 14:54:37 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:38 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m00VPDqo5ygvyFFidHfexO1YhH65glI9ywY/M40ZofRp37//q68xencKonoEkf2/VbPUkG0El6tmmGud0mwA2Q==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:39 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/5N1EuhWfUfFEpDXzDod3tHpRPvLgwLHkmTYyvArHccNAd/ReVGrFZ3QY8+83D6laQIUFR8Fx1E/+oxkr1686g==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.7ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:39 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WSsdEElfEg4kGlD54E1Y/o1IeiIALUJvto6A0DbOTI2rubfT2FjEXHzYo+GQq3uFNaMqzNSrh/kbENR+abvtoA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:40 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q8/vYNQml12uo97Z9OGcuo8ONy3GlpSz+tbHm3bBPDVZXUWjRSFBD/ZhLcGEB7/BN+VnwxIQUSVXSJM1KbSdGA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:40 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PJHZCSbU6ep9Ju+YtYNaHZJ+wFG6VNXFOCUViRoTMc7OA3PKt9M/uCXkHIDFZXlmKpWQv27SEFOVu0EnRWaQ4w==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:40 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rz3ZVnvXR0d6gi2Fev8b3dva+LO5Xe1axksbrX/HfrBdr3OV6tCRFSJA3p0KGTimYzGoXW3bKMxr1U8DILLfnQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.3ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:41 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g7ITs8bRFHI+TSrM5uYQtBpJOG8s9XGLwa2dTeTeSO9xILlwV9bCIGaP2dSWADPPoqJogfhztB1sM8nju6vpwg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 33ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:41 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NU9n1Vqkg/YMJOd/VxM08+5KhcYHhSqkCiyrfNcVKkTH3c0Wy6NVpFTmFGcn9ReIVqHVKNMD7zKnsv/SiGCLaQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:41 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"n8qOCJMMN5UsM7nqdKS393VQu/iD8FTk3/MTcFwmzEVtWCTLAgvhx3TxSvIEQpSMzbvrFld2kXJybUfeA1NtaA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (6.6ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:41 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I2x6vsYUbNixPEEn6LMqFs1w2ONn6xH6tsA42f0shZTR/tB9VxO6iun+sj+YVQltdZuIDbNt1GwbXmx3olkkuQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (2.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:42 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b0x1S5/Ip0f4dElh2wK6gNd/24VK56TLdukZHcIpoZ+d3t+IDs9xFaC2unmr5Jn7b5SLa55hYV3bd02znVwAsg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:42 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W/EAcCYvz3FGOb3FICKdGIgMruB3PB0gFdLlKHEgCfypY6qztygZIx77Tt1QxL5jMOf+DqO62La4TLGGLlWo0Q==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:42 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DLxdP6AuWGXxRrmGCZrxiYyk6vPGfWfAhPox81kDAeL+Lvf8MSmON6mESp55fNLyNE+6HRL7olYpZGVdBnagzw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:42 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QffKo0jQ17RY44Qkv1QSsE17fZgEbujX4u/YgPRRvCCzZWBg2dcB5gAhdzzPsjHL9ZAtdtDoLUFPcYwuqyQdDQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:43 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mz6Nus61TC1GrBDsbqmLhod/672scYPcFktoLvij8MHBrCd5X7Kafx5u4/QeT6j9P5S7U3j3Rkq71TyAp9ZR7A==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:43 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vCzYWbS0G6fOnUiAqaSYM0AmBTugPapPC9Dr4szARJhOvnKaJbPN9ZZfu5jZQrtI+M1V1XS7b9mmTr9Mk7XltQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:43 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"D6+JWCjoWsIESiP+TVVPHftc1rznsqSXnwfHvSz4EsD9PSObue+MkFyI0OY9s2xmQ7eGUjM0YQEymZMTc42z7Q==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:43 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/e0qodXSB22vF/bc2vQkruP0h4ikENU/ArROIiH25c8Pf4BiRNXRP/fVBcSqEgfVWx/XZnCWEKmvKhqMfoNE4g==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:43 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oB96wwIQnmwHmxkbecFkOh69Hht0XK/3PknH/2NmaPVSjdAAkxdIPl9Z6gMJJ0dBplZO9aDaamGT15NRPBPJ2A==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 17.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:44 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1BHHlHfImgzspdZTHJNZbd4JkdBPcfEWl1x9ontTeJcmg21X5s9MXrRnJUtsdXoWZuLBPpv3NIA6wikMJCbZug==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:44 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BQ/Ys0D7JN5vnIqDb71CEM/5Pj4aGyVAzfcE4jHR+3/3nXJw0fzyjDdeeZsfW2FrdxJu0M6d4NZgaVBMbqRaUg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:44 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ubj7GPQvrmFW9qSJFgD4GkjeCnLKh7c9wwYqqMAjG0BLKlHbZSh4Mw40V5Fm5tth8DVanB4BcqtumH4Gn1a6bQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.7ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:44 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZrHgY60tSBx740WQG+piwQuazrHbQW/aPP+yy8hxkO6UI0qgPCqeTiMhtohrDEG6s3GeXw/HqkyRYeZllwQxww==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:44 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ncRSC121KES7IfaPX01vdeNG+Z86GY1rFOJ7w5L5CapvVvjIzLL+FuPjBZcvq0wOW62pce6fSP25fC9tzYyohw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:44 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dj3DUoc0qcP87afZT53VVXl5vZ9IhCymDx5vnoyV38yEr2mRFjN/kaQvVME/e/YuwZLtcZwC6TCigDsw0+B+4Q==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:45 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LPJU5ExOYqk1aR8abMUQ+FwfdC2+gNZq8Bhj/mA05QzeYP4n3Um0+22r7AIcIzOD5PQkw2oGE/xdhjdQP0FEIQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:45 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z/ayKM5O8fxawPe63Y0RTBNK4ZozVcVMxknW2gS81HmVZBjrX0knrgICBKKtazI3q6GxdOfTANpr14J0W8l1VA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (2.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:45 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EONLoruk83NjoxjQ/nL213oJTlasnc2iUtywvjcoh//iceFhKqMlITth68iOlNWswuIeuHgbCDT/QuQQaF0m0g==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 16.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:45 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GcZfrpodf/hZ/ymxPenUo4ShWKhSq9WAP8JcmfM4L73rVPVtCxqpqgE92qlND/fYPEoIRoYtEBaSXAg3rE2OkA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:45 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"b4sIdBzzF/gVHiMxmIz6iVZ+dWYNuqVaxv2EHtvM62+dGaK3jfTBqk3c0Cnoatny7pUliNk8YMxrY9CwhLlKQg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (3.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:46 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7jLIb2tosv1SdX7ChQLFhf6iAgoUbrFmAy3dSl0XJOgcoGKs+m9krwq3jdr15Ob+RklS5MDodPCus4nkAmKFxQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (6.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:46 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hUwtoPSKjUdeetbZz+ip2oDdY0NHP/gnVuuvivw2bMR33odjZY1bFQa4JcG/DoqhODYzrZO5PbH7dfsko0PN6Q==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:46 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TAq4BQd24c+kzgVpExXhk7uv8TQZED7kVUFFAMG/+sW+mBLGlnE3nfwM9nFj88LoA0Sh2s2W+3L43xGunspb6A==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:46 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JaEAvTxAeTe49Xd3r3/Qt5+fFitptaZn3s7moxMTDQLXM6p+rUevZeA3hG/fmfPMJ3RGxb0zY/FzULINTGasLw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (2.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:46 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VSDBtMPK++K+LS9IxyqSLFMO/YLYYE3+xJ8f+yXrdH2nsmt3Us0tsObv3FC3zLFX6+WtbAzmiGhpAUtVep7VUA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:46 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4MJi+E/WSpewtbbYHNb12sClFkuf+bQSeF84pah3bKsSUMg73tGcxeh3RcBsMNaheE5GpUt/cYTVwWwL9wLNhg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:47 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6FHnMFYUI5aIIYwKu98MXQy8bnzFBKF91LsG8L9KKqMaw03zxxP1xNDjfxLLOS8mtFc+khGCZOt5JVJe4D+Ljg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:47 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HEeJf1Ix/+cLXu/8S89TxSzkEKF4x14/LMg4BjYgkAfu1SO8wzYptVOcHOQ7KXC+lA9AT6xBm6mBVmyoaVUxKg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (5.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:47 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ih820rfnwkKlvAjWykoGs+KdiSjPDyeJT89iFm8DOqfQjZwRJuAUEP1++866rCXIWnbZxhuJ4h/iUTa4MHabig==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:47 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4UnK29/QIu/fSYe5FumstgCA0CZJNlfqhhljHYCH96YT22AYTtf0vYeLdKFmD4/NuGuAyJ2wknwrhzez3/JWiw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:47 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"72PjdZxAVYg+hCSGBh7WmOj3DUSbl9meNgTYZtjM8mYd8Um2DUeD2mZG1552+PXjUBxdqk8RHAibmozIh7lTSw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:48 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XXsMy6nAXj/i0sQrfwIZNIMhuYGoII7Ml35SjD7NT1Kv6aYIOMeIbboQNzMP5DpPO8rpb3ymS1o64AYiYbjufw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.7ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:48 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3X6k4+p7gz/dr5ro1StVM4Q9lztIsDHZtXej8VD3Ao8v7A4ge3xVbYVtafClzXZIPNbH1Zw29E8Y6fdfD4Kjog==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.7ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:48 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rsP3HiWdaeAwLTkhiwNV+wz9ojz38k21r75LWV3MYhZcUV3dtJq/smjvyjn75XaAtBby0iN0iCMCIB/3ArnDOw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:48 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"blR/yUJ1KlW5qFDD3WeuCRR1q3+3r82LTiGXKzmGzsmcxtUK03L8B+Fqo9utgY1yrJ77kWMpCB3jv8OFZvNv5A==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 34ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:48 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"r6VhDPUFijb1+C3qtGDj9kBESuc2Z5sGoi6bDx4JSuhdN8vPZAJcZK063vLEhsCN+K8aCeLhXpAPsM+hQXzrxQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:48 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"StaaEzwCV7zNXjUusPDmUyeHAISLyyZs8bQRiZLmERa4RDDQrQWB7pWcxjbAFsUon2xQal9N4/pcKkUnzZOwOw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 62ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:49 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2AO78Cm2M/mFegfBXOXKJCfqhr21RhTXTG5ISq4TLvYqkREzuLHlq9249NksA+lfnwHWU2HA0UHh8Bzk8WaP2w==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 21ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:49 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uJOS2GZa8fSwugRQNBtQjyIEu/QdFoTcq19SxYOdN11KATgb910npuh490hE/XP0mu/rGsmQQUoGwQZr3OiWcA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:49 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+O5FwO1BEoIhaFaoy6QAfbLkBhvAStJ0k6nY+aKoC0MKfO8DfEbE0HmqpbC7QiMGCg9W9RTMF+I+N4xX/d2qbg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:49 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ioy10SPnlAK2sJ9LKD690bG99PW1Q1shGXd3VoDyVLrQHh8SsuBCUO5ybFNY2J6qCVakG2HFnre06SP434f1lw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (2.8ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:49 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FUkfB51kNLJNgjrI3eIfWy07YKyhqc1/pAoFNga70aPn27XEDGPi4BVAydCtBDwgldAwQnUvCOkJlFGYWc5wjg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:50 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J/5HXHfNk5sUOzT12LR6ZahyhHcyT7RtMO5ljeMK43vVbO2f5spFyUz5x+2oUlkeEJnUmebJcfudcDEjvH9CVg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:50 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CVRK2SX/PtAHAP7q5ptYSHxQJUWX0LEl61Yvp0GKSaT7xuAatPjogl/CDfKWfXszxLt1q0NWdLNGyHsJHv/oiQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:50 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e/3E8XY2WRDEs4cjtYnYr2z/g1s6nIk5uhGlVGg3AzSJb24y5zGPQpxxdDvFb/vU1BTTte4aTK8Xj/H6N0KiGQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:50 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XFxCCT418cBSXSKrxD8HvzCvBFGGsWmbZwnN0P8DAdWuzujKrzInkgqf0bO02STEiERUv1I3rA3Kl5l+oHag+A==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:50 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d/nO3HPM7WgvQWW2iyGu6PZ5AQF0XavIocNhWRu1VYyFa2Qf4ss7OneDlq77x42TTpJR76Dbbl4MXTX3RMD0oQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.9ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:50 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+ePQLpfcesPu9KlsYC1FgY+x1M5eCzm0sg+sqFpaK20LcXrtBtuskbY2WnQQy2b6N1qEIIqN/CIfkfgGBS+KQA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 15.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:51 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nN173m7qAJjnnMm6ae2fqxHecBFZCurTj1llk4IRcsJuT9Ed/+3Wyr9eOqIZC7zQqTUg/42ML0UixzE93WTT7w==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:51 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SrlMbmVB4BCUNfhFRIUoFNI/oxbS+qXIQDwlp0FLEaW4K+at9EY2Qsz3C100YwtvatTz+AZ8YF7tonEJHj6wiA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:51 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/x31a//mk4KmaCKgISSaB73rTnYSg20p0BNoj0opazwNj1+obuFF0P6q0bhRwrl8BQAemMYFqL99jTwhFVzKEQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 14:54:51 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ihi4eHW8RkpqCrE0aI5lH8nzgW6FsjhYtjDIeM33maTQihK75LuQGDLIQiwYaEZkcRjRgFE0/c4brpzWkoI4iQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-12-21 14:54:53 +0300
+Processing by UserController#logout as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-21 16:06:02 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (4.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+Completed 200 OK in 354ms (Views: 347.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-21 16:06:04 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-21 16:06:07 +0300
+Processing by UserController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YeMbDQGoEs6pbnuGldyJWn4MQaMndNcfICNw7Ad5M3Aa2yVXMhYibkvkJtMbiCiL3gW+Viee3FP9VR3iw6Ad7w==", "email"=>"frunz24@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'frunz24@gmail.com' LIMIT 1
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 104ms (Views: 10.1ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-21 16:06:09 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:10 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bDJfTMEKn4JodMnMsBzgn5sWlMdNsVCQt6MPhWJibVAXCmEW8rSvIor+lJk+SEFOOx9rMk1bW9xq1WKLprtDzw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:10 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"150FvAT72LKkOnjphAdWHeNsHxEzv43ui2AsX4ju1PCspTvmN0XoEkawJbwKU/fMQ2Xg5DNVhqJWFkFRTDf6bw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:11 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sBwhRmv0rivj1oCnGHg+2/CKptEdlMLoAavK28aQli3LJB8cWEqeiwFc3fKWLJ8KUINZJB1+yaTc3afVAkm4sg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 19.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:11 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XQxv8NfObVuw6XEl0kDngMJCT7uM9d1otYBHz6LKgOEmNFGq5HBd+1JjLHBcFEZRYkuwTowf1iRo9irBZhOufg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:11 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MSO0Cy9EABA73r3j+OdxIZWWIbY9gd13Q+JwhKjDlH9KG4pRHPowsNlU4LZ2s9DwNZ/eQz1r1juelB2KbBq64A==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:11 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h8O8tCpbWCO1YBtvKcHGXq/xdD6rD9X4CdAsJJ6MKl78+4LuGeVog1fqRjqnlWePD/iLy6vl3rTUpkEqWlUEwQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:11 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/RrGfiOhmMiZ67iyaN75Acx5/GNMSoBDt2LaBHZG4mSGIvgkEB+oaHth5efmiljQbHADlkygiw9qFLcKsp/M+w==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:11 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nmuz1StZnvZ8feME1grVBdURIfCEKAtUMQrDtrO592HlU42PGOeuVp73vlFYXnTUdRjeBYTCABjsfK64d2DZ/g==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:12 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d27sSuR3dn1No5Z6cW99HaqPflUVRuY37HHP764MuIsMVtIQ18lG3a8pyy//O9zMCoaBoBWs7XsxB6LhatWWFA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:12 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NvKER0tL0MM/3I6Ml8ZgdKBj0Y3l0w3QLAtvAlnZ/OtNyrodePXgY91W09kZksGlAGoueOU5BpzxfQIMnQDSdA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (3.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:12 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3vajd81qGTU2ybvvXQfohuMJEDWx1VjEdvvGmr+3IWalzp0t/tQpldRD5rrTU0lXQwDvwLE/U4irjauUe24P+Q==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:12 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g6weeck3fJXCTYwlnukOmGGHWbXRZ1BQQOGMtcG/zsH4lCAj+olMNSDH0XAQva9JwY6mQNGNWxydl+G7BWbgXg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:12 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ut8Vd8iagLnE8uPnWMvvCweKesaJxddot0R/+SW+hJfB5yst+ySwGSZ4vrLWn07ap4OFM4kv3CRqMhL34WeqCA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:13 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gHa8KR4CoDduuSJvif0W77lgc4yxMoLhBjL1VNdKxGX7ToJzLbyQl4wzfzoHqbc+GWmMebHYia3bRJhaE5Pq+g==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 23ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:13 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ET38JZjhGg+cvnsJqTUKp8tPdqmK8vNnO0RU+GRuEAtqBcJ/q18qr340JlwnYat2a0aJXIoY+CvmMjn2oLc+lA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:13 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lantB4EDW6B3o8KCYwTrN+nt0a2W0QjEuz4ncHks43XukdNdsr1rAJUpn9ftUErmSeQuWJY7A4hmSEp+vfXN6g==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:13 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JPdecuZp1KY9cACevaqdOnDufy5PufBrvmYP9Q68sqxfz2Ao1dfkBt/6Xcsz/jzr0OeA209T+ydjEGL7ymWcMw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.6ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:13 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6tyMz5/oZawlnLalC+mnscfhL9aSq/AXjOtD+JCkPeSR5LKVrFZVDMcW6/CFvQZgZ+jQI5JB+1tRnS72VH0Tew==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (2.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 24ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:13 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0FXa4mr8xm78LmMZF8BcLd/lyaEkuUIPdVOAetuG35yrbeS4WUL2zh6kPkyZlP38f+w2VCRTSUOoJe10H1/xAw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 10.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:14 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fZpmISplSAm+4N8F2WPjeyzuULid44YDFxrMrUqTlS4Golh7Gdt4qVxqglBXN0KqjOevTZ0JjU/KbKGjjkq7sQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:14 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W8zykmvZOGaFI++sk3ihJ64liO6vWiPx7bhDLhQoUyYg9MzIWGcIxmepsvkdLAD2Dix3G6+wKL0wzi4g0PF9uQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:14 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MD+TkGt3/GOBxuwLrXqRhsoamT9whRSxiA17h4rpFtdLB63KWMnMw2NMsV4jLjBXahNmynBvH/1VexaJTjA4SA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:14 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jDlZbtYiNUKgQ2fDFvslvnPq1XrN97L94Vm+mxOZYon3AWc05ZwF4kLJOpaYr4Rv0+Mqj80dubE8L9OV10BMFg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:14 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xF5wyt9z6yrOYuGLlU+MsYyDO/VXpR4sicYQmq2Q0Su/Zk6Q7M3biizovN4bGy1gLIrEAFdPFWBUsH2UaUn/tA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:15 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KJHD673DQ7gKARxHZUBd1lPrc4o4Vb47BWYEkTKPPORTqf2xjn1zGOiLQRLrFPwH8+KMfzi/tXfYEGmf9lYSew==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:15 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OgF1ZO2P8wVqJnzrPvFVZ9akM8U/Zr3V+CzK1TZ9WRxBOUs+3jHDpYisIb6wpfS2dq3MMD+MtpklWqfb8qR3gw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.2ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:15 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DWGtgAZ+wggZ2cBxhRtZZNYEgfNzhwcaOZ/X6SpsZVV2WZPaNcDyqPtTnSQLT/i1dg1+BnNtDFbk6brn7rVLyg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:15 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RTDAOyyc5gU58KWtOycWhHwGJv9ApOjqafzOI5WA1Oo+CP5hHyLWpdt6+Pi1c7dV3A/ZCkBO46a0iqMtUVn6dQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.8ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:15 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cvaB3HxUprJScZtIJzaJoXsqJlJK60/B/QH92t1djRgJzr+GT+qWErD7xh2pYihw2yPZp0oBRI0gd5DUGYSjhw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:16 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k2ziIKDLgMpi+yRyemCKTraw8KJDOB4Ns8T7nTIQkFToVNx6k3WwaoBxeSf0NCufFrkPV0PSFUFuspaT9sm+yw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:16 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FEl1hmAkIc1thYe41XaHAcqR/kGLdT3dX34d4SRo69BvcUvcU5oRbY8P2u1bIibQapgBtIufNpGCCHDv4LHFTw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:16 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QbqjalkMZJIAzG2PAWmiAx6WvssbjnEYnySSVqHW/VM6gp0warJUMuJGMNqPPQPSvp9BPhtkelRCUv9YZQ/TzA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:16 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ye5mnQN2wBx9Z6YwnAOcSIdXiW/nNJVpUouhCWAgWciy1ljHMMjwvJ/t+2USVz2ZJ152mufeniWP/cwHpPl3Vw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:16 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o/kC6L1PgDKzinnNlhO+O59sLIPvoHGnfU+0/FgEr+vYwTyyjvGwklEAJJgYRx/qP2XTdu9KeuugOdnynN2BdA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:17 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7v432hRS8fD5KlpAY8ogFRL7hwx/RuJIr1C64BmtkmSVxgmAJ+zBUBugBxXtnoHEsvJ4+X+s6QRyJtfu3XS8+w==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:17 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oWskZfQt9ElYWokvMbALnl1V8+D2uvBZ6eB5+0ItCSTaUxo/x5PE6brQ1Hq/5KpP/VwMFfZQ+xU0lhT1hvQnuw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:17 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GiXXLKPlV5HPB3mXTMOjYwyuZU1KE9zi7KscA99DAbphHel2kFtnMS2NJMLClwKyrKeauEr5164x3XENG5ovJQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 14ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:17 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bdieeUthYvzXF7TTPINtjKcH7SxTix8pUZmfdHA8UfcW4KAjeN9SXDWd6Yay18xdBw4S2VNhFGWM7/J6tOV/aA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/nonill" for 127.0.0.1 at 2017-12-21 16:06:18 +0300
+Processing by StaticPagesController#no_nill as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7VKcvy8NpKZ0TpIFvIgWKA5emGQ8AYSUyKihfi1xNUeWaqLlHLOUBpbEz1Ay3Lf5rldnkTzrj9gV3sxw6agb2A==", "commit"=>"Get nonill array"}
+  [1m[36m (0.6ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get no nil array', '2017-12-21 13:06:18', '2017-12-21 13:06:18')
+  [1m[36m (30.0ms)[0m  [1mCOMMIT[0m
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 10.0ms | ActiveRecord: 36.9ms)
+
+
+Started POST "/hsh/max" for 127.0.0.1 at 2017-12-21 16:06:19 +0300
+Processing by StaticPagesController#get_max as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g6vq5dhQRlxZBWkhanJ8OAvMvnNhY6RwgFtVcXIfFVX4k9S/6+52/LuPNHTkJt3pq8VBhmGJrzxdLTh/tsY7yg==", "commit"=>"Get max"}
+  [1m[35m (2.5ms)[0m  BEGIN
+  [1m[36mSQL (2.6ms)[0m  [1mINSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get max', '2017-12-21 13:06:19', '2017-12-21 13:06:19')[0m
+  [1m[35m (28.7ms)[0m  COMMIT
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 45ms (Views: 9.4ms | ActiveRecord: 33.7ms)
+
+
+Started POST "/hsh" for 127.0.0.1 at 2017-12-21 16:06:19 +0300
+Processing by StaticPagesController#array as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Vvj0eJNhojMcyhkHTj97MMooZTFxXFUM1M+iM9cG/AUtwMoioN+Sk/5ARFLAa9rhaiGaxHG2XkAJuc89E9/Smg==", "commit"=>"Get array"}
+  [1m[36m (0.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get array', '2017-12-21 13:06:19', '2017-12-21 13:06:19')
+  [1m[36m (65.3ms)[0m  [1mCOMMIT[0m
+  Rendered static_pages/hsh.html.erb within layouts/application (0.8ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 79ms (Views: 9.7ms | ActiveRecord: 67.3ms)
+
+
+Started POST "/hsh/max" for 127.0.0.1 at 2017-12-21 16:06:21 +0300
+Processing by StaticPagesController#get_max as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nV+32pbxOpNx8I4E8I7nwDU8Mb5eYmuNp3fKXScD9ZHmZ4mApU8KM5N601F+2kYRlTXOS16IYMF6AadT49rbDg==", "commit"=>"Get max"}
+  [1m[35m (0.9ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get max', '2017-12-21 13:06:21', '2017-12-21 13:06:21')[0m
+  [1m[35m (38.5ms)[0m  COMMIT
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 52ms (Views: 9.5ms | ActiveRecord: 40.4ms)
+
+
+Started POST "/hsh/nonill" for 127.0.0.1 at 2017-12-21 16:06:22 +0300
+Processing by StaticPagesController#no_nill as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rgRR/YoE2Gsn84xXw5XnQOBkZkEa5vwk6uNbLEhobqjVPG+nubroy8V50QJNwUaRQG2ZtBoM92g3lTYijLFANw==", "commit"=>"Get nonill array"}
+  [1m[36m (1.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get no nil array', '2017-12-21 13:06:22', '2017-12-21 13:06:22')
+  [1m[36m (29.2ms)[0m  [1mCOMMIT[0m
+  Rendered static_pages/hsh.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 45ms (Views: 10.7ms | ActiveRecord: 31.7ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:23 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DLW+zim9R+Rdw+5s/9L4aQ4GR0uZO/LrskRPrbOSJx93jYCUGgN3RL9Jszlxhlm4rg+4vpnR+advMiKjd0sJgA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.4ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-21 16:06:24 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2qhb3IyaYQUwnemFTFShf1C67qhFsNT1xnaH+IkwD/OhkGWGvyRRpdIXtNDCAACu8LMRXUVa37kbAOr2TekhbA==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh" for 127.0.0.1 at 2017-12-21 16:06:25 +0300
+Processing by StaticPagesController#array as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y4XC/aEW5Y0XCnZmorqQ8GCSqK+0I8HB5xbqljvE92IYvfynkqjVLfWAKzMs7jEhwJtXWrTJyo06YIeY/x3Z/Q==", "commit"=>"Get array"}
+  [1m[35m (1.9ms)[0m  BEGIN
+  [1m[36mSQL (1.1ms)[0m  [1mINSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get array', '2017-12-21 13:06:25', '2017-12-21 13:06:25')[0m
+  [1m[35m (31.5ms)[0m  COMMIT
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 16.2ms | ActiveRecord: 34.6ms)
+
+
+Started POST "/hsh/max" for 127.0.0.1 at 2017-12-21 16:06:26 +0300
+Processing by StaticPagesController#get_max as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZoLxSgtKT0KmAfjel4YIYdSUFFJ2Ijgpfo8oho9eO/8dus8QOPR/4kSLpYsZ0qmwdJ3rp3bIM2Wj+UWIS4cVYA==", "commit"=>"Get max"}
+  [1m[36m (1.9ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get max', '2017-12-21 13:06:26', '2017-12-21 13:06:26')
+  [1m[36m (33.6ms)[0m  [1mCOMMIT[0m
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.0ms)
+Completed 200 OK in 48ms (Views: 9.3ms | ActiveRecord: 36.6ms)
+
+
+Started POST "/hsh/nonill" for 127.0.0.1 at 2017-12-21 16:06:28 +0300
+Processing by StaticPagesController#no_nill as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DkkxPb716BUtbKWPcJ4xsiRM0oNuXeTle/kuf7NEMDV1cQ9njUvYtc/m+Nr+ypBjhEUtdm6376mmj0Nxd50eqg==", "commit"=>"Get nonill array"}
+  [1m[35m (1.2ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get no nil array', '2017-12-21 13:06:28', '2017-12-21 13:06:28')[0m
+  [1m[35m (30.9ms)[0m  COMMIT
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 9.4ms | ActiveRecord: 33.1ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-21 16:06:30 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-12-21 16:06:38 +0300
+Processing by UserController#logout as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
