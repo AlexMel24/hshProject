@@ -91,6 +91,9 @@ Hsh.prototype.showHash = function (varhsh, newLine) {
     }
 
 }
+Hsh.prototype.resetCurrentPairs = function () {
+    currentPairs = 0;
+}
 
 
 function Arr () {
@@ -180,10 +183,10 @@ Arr.prototype = new Hsh();
 
 displayHash = function() {
 
-    hs = new Arr();
-
-    t = hs.newHashElement(3);
-    h = hs.createHash(t);
+    var hs = new Arr();
+    hs.resetCurrentPairs();
+    var t = hs.newHashElement(3);
+    var h = hs.createHash(t);
     hs.getArr(h);
     hs.showHash(h,'');
     var prehs = document.getElementById('init');
