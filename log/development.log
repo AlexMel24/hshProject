@@ -38398,3 +38398,353 @@ Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
   [1m[35mUser Load (1.5ms)[0m  SELECT  `users`.* FROM `users`  ORDER BY `users`.`id` ASC LIMIT 1
   [1m[36mUser Load (1.6ms)[0m  [1mSELECT users.name, ua.activity FROM `users` INNER JOIN user_activities ua on ua.user_id = users.id and ua.activity = "Get no nil array" WHERE (users.name = 'Alex')[0m
   [1m[35mUser Load (5.9ms)[0m  SELECT DISTINCT users.name, ua.activity FROM `users` INNER JOIN user_activities ua on ua.user_id = users.id and ua.activity = "Get no nil array" WHERE (users.name = 'Alex')
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 18:55:26 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (3.9ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.7ms)
+Completed 200 OK in 304ms (Views: 296.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-26 18:55:29 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-26 18:55:31 +0300
+Processing by UserController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1AbC2T/Pw9kKAMQNXElfkK/Q4XC7kqibgqZW4kZJenJmH76zK7KMBA70bUr6j6aFL+KC0JmhqP4gMMYdCOZ+VQ==", "email"=>"frunz24@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (1.7ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'frunz24@gmail.com' LIMIT 1
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 108ms (Views: 9.9ms | ActiveRecord: 9.8ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-26 18:55:33 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-26 18:55:34 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.7ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-26 18:55:34 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.0ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-12-26 18:55:39 +0300
+Processing by UserController#logout as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-26 18:55:48 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+Redirected to http://0.0.0.0:3000/login
+Filter chain halted as :is_user_loged? rendered or redirected
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-26 18:55:48 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (0.6ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 10.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-26 18:56:00 +0300
+Processing by StaticPagesController#hsh as HTML
+Redirected to http://0.0.0.0:3000/login
+Filter chain halted as :is_user_loged? rendered or redirected
+Completed 302 Found in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-26 18:56:00 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (0.6ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 19:00:25 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (3.4ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+LoadError (cannot load such file -- lib\my_hash_class.rb):
+  app/controllers/static_pages_controller.rb:4:in `<class:StaticPagesController>'
+  app/controllers/static_pages_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.0ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (28.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (59.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 19:01:11 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+Completed 200 OK in 192ms (Views: 184.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-26 19:01:13 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (1.8ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-26 19:01:15 +0300
+Processing by UserController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jn1tfrch1343ZmvpdO8aUoXCWXtyxdJxuZ4nULbfC8rQwAuy3ow0fUS6lwPDBZ/+iyFsPzXLYbCFR9XlkWJGYA==", "email"=>"frunz24@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (1.3ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'frunz24@gmail.com' LIMIT 1
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 105ms (Views: 8.8ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-26 19:01:17 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 12ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-26 19:01:17 +0300
+Processing by StaticPagesController#hsh as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant StaticPagesController::MyCustomArray):
+  app/controllers/static_pages_controller.rb:11:in `hsh'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (18.8ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 19:03:11 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.8ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+Completed 200 OK in 195ms (Views: 185.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-26 19:03:13 +0300
+Processing by StaticPagesController#hsh as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant StaticPagesController::MyCustomArray):
+  app/controllers/static_pages_controller.rb:11:in `hsh'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.6ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.1ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-26 19:03:50 +0300
+Processing by StaticPagesController#hsh as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NameError (uninitialized constant StaticPagesController::MyCustomArray):
+  app/controllers/static_pages_controller.rb:11:in `hsh'
+
+
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (19.1ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (14.7ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/mel/.rvm/gems/ruby-2.4.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (29.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-12-26 19:04:13 +0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StaticPagesController#welcome as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.4ms)
+Completed 200 OK in 225ms (Views: 217.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2017-12-26 19:04:15 +0300
+Processing by UserController#login as HTML
+  Rendered user/login.html.erb within layouts/application (1.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2017-12-26 19:04:17 +0300
+Processing by UserController#signin as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I49S/EX8B6er2qYRdwHMoqQhy7bLZPD6FK3So8smdNRuQrYGb3UyiIZt/j2KdFJA8tN+jJzSAtdeLJCbTKM4Kg==", "email"=>"frunz24@gmail.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (17.9ms)[0m  SELECT  `users`.* FROM `users` WHERE `users`.`email` = 'frunz24@gmail.com' LIMIT 1
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 132ms (Views: 12.6ms | ActiveRecord: 25.7ms)
+
+
+Started GET "/hsh" for 127.0.0.1 at 2017-12-26 19:04:19 +0300
+Processing by StaticPagesController#hsh as HTML
+  Rendered static_pages/hsh.html.erb within layouts/application (1.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-26 19:04:20 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bUs37MimLPTUjl/Na0CGcUbxXIL1RkFgZnL1cwEzooAghtMW4i8Z2/k5B+GWNRiTEAPpuKLws00s87dLhrbufg==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-26 19:04:21 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SrrbAdUtEIYaQJFgXhx/aWOyu+M2cBoCQtfvgLWEIs0Hdz/7/6QlqTf3yUyjaeGLNUAO2WHG6C8IVq24MgFuMw==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.9ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh" for 127.0.0.1 at 2017-12-26 19:04:21 +0300
+Processing by StaticPagesController#array as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HZlRxSzPjWToRmQJDHAG6cmFC03aFf0maRqDcO8r4gBQVLU/Bka4S8XxPCXxBZgLn3e+d42jDwsjm8FIaK6u/g==", "commit"=>"Get array"}
+  [1m[36m (0.7ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get array', '2017-12-26 16:04:21', '2017-12-26 16:04:21')
+  [1m[36m (44.5ms)[0m  [1mCOMMIT[0m
+  Rendered static_pages/hsh.html.erb within layouts/application (1.0ms)
+  Rendered shared/_flashes.html.erb (0.2ms)
+Completed 200 OK in 74ms (Views: 12.0ms | ActiveRecord: 52.5ms)
+
+
+Started POST "/hsh/max" for 127.0.0.1 at 2017-12-26 19:04:22 +0300
+Processing by StaticPagesController#get_max as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"U0qErQE2H+UM7poz3JM87Az923p8XR75thKd5NHejcMeh2BXK78qyiFZwh8h5qIOWg9uQCvr7NT8k9/cVlvBPQ==", "commit"=>"Get max"}
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get max', '2017-12-26 16:04:22', '2017-12-26 16:04:22')[0m
+  [1m[35m (32.2ms)[0m  COMMIT
+  Rendered static_pages/hsh.html.erb within layouts/application (1.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 47ms (Views: 10.0ms | ActiveRecord: 34.3ms)
+
+
+Started POST "/hsh/nonill" for 127.0.0.1 at 2017-12-26 19:04:23 +0300
+Processing by StaticPagesController#no_nill as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iJ03bJEDNvhPr8JY/hUJ40g7hmeOlq6BVGBR+bKdFBnFUNOWu4oD12IYmnQDYJcBHskzXdkgXKwe4RPBNRhY5w==", "commit"=>"Get nonill array"}
+  [1m[36m (1.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get no nil array', '2017-12-26 16:04:23', '2017-12-26 16:04:23')
+  [1m[36m (45.2ms)[0m  [1mCOMMIT[0m
+  Rendered static_pages/hsh.html.erb within layouts/application (9.5ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 69ms (Views: 19.9ms | ActiveRecord: 47.4ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-26 19:04:25 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DXakQBu7LGNK585aPELNn+ydEYR5HXbCiGJQpekr3n9Au0C6MTIZTGdQlnbBN1N9um+kvi6rhO/C4xKdbq6SgQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (0.8ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh/new" for 127.0.0.1 at 2017-12-26 19:04:26 +0300
+Processing by StaticPagesController#new_hsh as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mu2ZH6ROiUdu/9gaw9tJyr9FLTiCTHsgKdoCl2VIXnfXIH3ljse8aENIgDY+rtco6beYAtX6iQ1jW0Cv4s0SiQ==", "commit"=>"Generate new hash"}
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 15ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/hsh" for 127.0.0.1 at 2017-12-26 19:04:27 +0300
+Processing by StaticPagesController#array as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I9pczEutxl0s3dJL9nXDAOY6A1d23ba3RMABXSfps11uF7g2YSTzcgFqimcLAF3isMi2bSFrRJoOQUNloGz/ow==", "commit"=>"Get array"}
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get array', '2017-12-26 16:04:27', '2017-12-26 16:04:27')[0m
+  [1m[35m (41.4ms)[0m  COMMIT
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 56ms (Views: 10.2ms | ActiveRecord: 44.0ms)
+
+
+Started POST "/hsh/max" for 127.0.0.1 at 2017-12-26 19:04:29 +0300
+Processing by StaticPagesController#get_max as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H4kqQdvBk5G5x45QeRit16/UFwKDQClIChppk75LapxSRM678UimvpRw1nyEbTM1+SaiONT222VAmyurOc4mYg==", "commit"=>"Get max"}
+  [1m[36m (1.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get max', '2017-12-26 16:04:29', '2017-12-26 16:04:29')
+  [1m[36m (33.4ms)[0m  [1mCOMMIT[0m
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 51ms (Views: 13.5ms | ActiveRecord: 35.6ms)
+
+
+Started POST "/hsh/nonill" for 127.0.0.1 at 2017-12-26 19:04:30 +0300
+Processing by StaticPagesController#no_nill as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"L+jtuazMAykcGLCLRONiT3JS8n78T6MpfYBBjlKIvGhiJQlDhkU2BjGv6Ke5lvytJKBHRKv5UQQ3AQO21Q3wlg==", "commit"=>"Get nonill array"}
+  [1m[35m (0.8ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO `user_activities` (`user_id`, `activity`, `created_at`, `updated_at`) VALUES (43009, 'Get no nil array', '2017-12-26 16:04:30', '2017-12-26 16:04:30')[0m
+  [1m[35m (42.6ms)[0m  COMMIT
+  Rendered static_pages/hsh.html.erb within layouts/application (1.2ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 57ms (Views: 10.0ms | ActiveRecord: 44.4ms)
+
+
+Started GET "/jshsh" for 127.0.0.1 at 2017-12-26 19:04:32 +0300
+Processing by JavaScriptHashController#jsshoh as HTML
+  Rendered java_script_hash/jsshoh.html.erb within layouts/application (0.3ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2017-12-26 19:04:37 +0300
+Processing by UserController#logout as HTML
+  Rendered static_pages/welcome.html.erb within layouts/application (0.1ms)
+  Rendered shared/_flashes.html.erb (0.1ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
