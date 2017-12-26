@@ -1,6 +1,5 @@
 class StaticPagesController < ApplicationController
   include StaticPagesHelper
-  before_action :is_user_loged?, only: [:hsh, :array, :no_nill, :get_max, :sor_ar]
   def welcome
   end
 
@@ -51,12 +50,6 @@ class StaticPagesController < ApplicationController
   end
 
 private
-  def is_user_loged?
-    if session[:user_id].nil?
-      flash.now[:success] = "Log in, first, please!"
-      redirect_to login_path
-    end
-  end
 
   def insert_activity(act_name)
     @user_activ = UserActivity.new
