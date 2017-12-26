@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4b94f923-e4f8-4329-9ad6-a4b3755b3313" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/static_pages_controller.rb" />
-      <change beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -418,7 +415,7 @@
       <workItem from="1513930117208" duration="3695000" />
       <workItem from="1513951709515" duration="144000" />
       <workItem from="1514297845971" duration="1707000" />
-      <workItem from="1514303568513" duration="92000" />
+      <workItem from="1514303568513" duration="111000" />
     </task>
     <task id="LOCAL-00001" summary="hhh">
       <created>1512388149839</created>
@@ -630,11 +627,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513861650683</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="add">
+      <created>1514303664887</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1514303664887</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79602000" />
+    <option name="totallyTimeSpent" value="79621000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
