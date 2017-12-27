@@ -1,7 +1,6 @@
 class StaticPagesController < ApplicationController
 
-  include StaticPagesHelper
-  # require 'lib\my_hash_class.rb'
+# include StaticPagesHelper
   require "#{Rails.root}/lib/my_hash_class"
   def welcome
   end
